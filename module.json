@@ -5,7 +5,7 @@
   "author": "FranzWarm",
   "version": "0.3.0",
   "minimumCoreVersion": "0.7.9",
-  "system": "alienrpg"
+  "system": "alienrpg",
   "styles": [
         "/css/AlienCRT_UI.css"
     ]
