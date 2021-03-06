@@ -1,0 +1,12 @@
+{
+  "name": "AlienCRT_UI",
+  "title": "Alien RPG CRT UI",
+  "description": "Alternate styling for Alien sheets and interface",
+  "author": "FranzWarm",
+  "version": "0.3.0",
+  "minimumCoreVersion": "0.7.9",
+  "system": "alienrpg"
+  "styles": [
+        "/css/AlienCRT_UI.css"
+    ]
+}
