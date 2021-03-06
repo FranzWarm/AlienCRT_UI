@@ -8,5 +8,11 @@
   "system": "alienrpg",
   "styles": [
         "/css/AlienCRT_UI.css"
-    ]
+    ],
+  "url": "https://github.com/FranzWarm/AlienCRT_UI",
+  "manifest": "https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/module.json",
+  "download": "https://github.com/FranzWarm/AlienCRT_UI/releases/download/0.0.1/module.zip"  
+  
+  
+  
 }
