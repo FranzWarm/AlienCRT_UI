@@ -5,11 +5,11 @@ This module adds an old CRT style for the Alien RPG system sheets, chat cards, a
 
 The current state of the Character Sheet:
 
-[![Character Sheet Demo](https://img.youtube.com/vi/PRKb6gNFzmY/0.jpg)](https://www.youtube.com/watch?v=PRKb6gNFzmY)
+[![Character Sheet Demo](https://user-images.githubusercontent.com/80177177/110247047-f03f8680-7f48-11eb-8dc2-3e82e01a4393.jpg)](https://www.youtube.com/watch?v=PRKb6gNFzmY)
 
 New buttons for creature attack and push rolls:
 
-[![creature attack and push roll buttons](https://img.youtube.com/vi/RrLbk72iUk0/0.jpg)](https://www.youtube.com/watch?v=RrLbk72iUk0)
+[![creature attack and push roll buttons](https://user-images.githubusercontent.com/80177177/110247055-f9305800-7f48-11eb-91c1-8133abdd2b75.jpg)](https://www.youtube.com/watch?v=RrLbk72iUk0)
 
 
 
