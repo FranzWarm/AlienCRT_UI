@@ -1,0 +1,17 @@
+{
+  "name": "alien-crt-ui",
+  "title": "Alien RPG CRT UI",
+  "description": "Alternate styling for Alien sheets and interface",
+  "author": "FranzWarm",
+  "version": "0.3.0",
+  "minimumCoreVersion": "0.7.9",
+  "compatibleCoreVersion": "0.7.9",
+  "system": ["alienrpg"],
+  "esmodules": ["./module/init.js"],
+  "styles": [
+        "./css/alien-crt-ui.css"
+    ],
+  "url": "https://github.com/FranzWarm/AlienCRT_UI",
+  "manifest": "https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/dist/module.json",
+  "download": "https://github.com/aMediocreDad/AlienCRT_UI/archive/main.zip"
+}
