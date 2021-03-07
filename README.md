@@ -1,6 +1,6 @@
 # AlienCRT_UI
 
-This module adds an old CRT style for the Alien RPG system sheets, chat cards, and minor tweeks on the interface for Foundry VTT.
+This module adds an old CRT style for Foundry's Alien RPG system sheets, chat cards, and minor tweeks on the interface.
 
 
 The current state of the Character Sheet:
