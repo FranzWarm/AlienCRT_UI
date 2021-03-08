@@ -12,6 +12,6 @@
         "./css/alien-crt-ui.css"
     ],
   "url": "https://github.com/FranzWarm/AlienCRT_UI",
-  "manifest": "https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/dist/module.json",
+  "manifest": "https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json",
   "download": "https://github.com/FranzWarm/AlienCRT_UI/archive/main.zip"
 }
