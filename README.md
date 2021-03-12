@@ -2,20 +2,20 @@
 
 This module adds an old CRT style for Foundry's Alien RPG system sheets, chat cards, and minor tweeks on the interface.
 
+version 0.3.1
 
-The current state of the Character Sheet:
+![v0.3.1](https://user-images.githubusercontent.com/80177177/111000505-eb237280-8360-11eb-9b30-aea0fbf73db7.png)
 
-[![Character Sheet Demo](https://user-images.githubusercontent.com/80177177/110247047-f03f8680-7f48-11eb-8dc2-3e82e01a4393.jpg)](https://www.youtube.com/watch?v=PRKb6gNFzmY)
 
-New buttons for creature attack and push rolls:
 
-[![creature attack and push roll buttons](https://user-images.githubusercontent.com/80177177/110247055-f9305800-7f48-11eb-91c1-8133abdd2b75.jpg)](https://www.youtube.com/watch?v=RrLbk72iUk0)
+version 0.3.0
+
+[![Character Sheet Demo](https://user-images.githubusercontent.com/80177177/111000457-db0b9300-8360-11eb-971f-197d15276c80.jpg)](https://www.youtube.com/watch?v=PRKb6gNFzmY) [![creature attack and push roll buttons](https://user-images.githubusercontent.com/80177177/111000762-67b65100-8361-11eb-9679-fb90dd1598a7.jpg)](https://www.youtube.com/watch?v=RrLbk72iUk0)
 
 
 
 Original Sheet by [Paul Watson](https://github.com/pwatson100/).
-
-Thanks to [aMediocreDad](https://github.com/aMediocreDad), [Paul Watson](https://github.com/pwatson100/) and Darshyne.
+Thanks to [aMediocreDad](https://github.com/aMediocreDad), [Paul Watson](https://github.com/pwatson100/), Darshyne, and everybody from the Brazilian Foundry discord server.
 
 Alien RPG System by [Free League](https://frialigan.se/en/games/alien/).
 
