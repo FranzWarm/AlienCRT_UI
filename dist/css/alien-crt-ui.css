@@ -143,16 +143,34 @@
   }
 }
 
+:root {
+	--alienfont:MS Gothic !important;
+	--aliengreen: #88f2ad !important;
+	--aliendarkergreen: #29a253;
+	--alienitemselect: #e0f287;
+	--alienoddtab: #14160c;
+}
+
+/* interface */
+
+::-webkit-scrollbar-thumb {
+    outline: none !important;
+    border-radius: 2px !important;
+    background: var(--aliendarkergreen) !important;
+    border: 1px solid var(--aliendarkergreen) !important;
+}
+
 .window-header {
 	background-color: rgba(50,100,120,.3);
 	border-radius: 7px 7px 0px 0px;
+
 }
 
-input[type="text"],
-input[type="number"],
-input[type="password"],
-input[type="date"],
-input[type="time"] {
+.alienrpg input[type="text"],
+.alienrpg input[type="number"],
+.alienrpg input[type="password"],
+.alienrpg input[type="date"],
+.alienrpg input[type="time"] {
 	border-radius: 0px !important;
 	border: 1px solid var(--aliendarkergreen);
 }
@@ -168,21 +186,74 @@ input[type="time"]:focus {
   font-style: bold;
 }
 
-::-webkit-scrollbar-thumb {
-    outline: none !important;
-    border-radius: 0px !important;
-    background: var(--aliendarkergreen) !important;
-    border: 1px solid var(--aliendarkergreen) !important;
-}
-
-:root {
-	--aliengreen: #88f2ad;
-	--aliendarkergreen: #29a253;
-	--alienitemselect: #e0f287;
-}
-
 a:hover {
 	text-shadow: 0 0 5px var(--aliengreen);
+}
+
+#sidebar-tabs {
+	border-bottom: 1px solid var(--aliengreen);
+	box-shadow: 0 0 10px var(--aliengreen);
+}
+
+#sidebar-tabs .item.active {
+	border: 1px solid var(--aliengreen);
+	box-shadow: 0 0 6px inset var(--aliengreen);	
+}
+
+select:focus {
+	box-shadow: 0 0 5px var(--aliengreen);
+}
+
+textarea:focus {
+	outline: 0px;
+    box-shadow: 0 0 10px var(--aliengreen);
+	background-color: var(--aliengreen);
+	color: #000!important;
+}
+
+combobox:focus {
+	outline: 0px;
+    box-shadow: 0 0 10px var(--aliengreen);
+	background-color: var(--aliengreen);
+	color: #000!important;
+}
+
+#hotbar .macro:hover {
+	box-shadow: 0 0 10px inset var(--aliengreen);
+}
+
+#hotbar .macro.active:hover {
+	border: 1px solid var(--aliengreen);
+}
+
+#players ol .player.context {
+	border-top: 1px solid var(--aliengreen);
+	border-bottom: 1px solid var(--aliengreen);
+}
+
+#players ol .player.context .player-name {
+	text-shadow: 0 0 5px var(--aliengreen)!important;
+}
+
+#context-menu li.context-item:hover {
+	text-shadow: 0 0 4px var(--aliengreen)!important;
+}
+
+#controls .scene-control.active,
+#controls .control-tool.active,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+	border: 1px solid var(--aliengreen);
+	border-bottom: 1px solid var(--aliendarkergreen);
+	box-shadow: 0 0 10px var(--aliendarkergreen);
+}
+
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.context {
+    border: 1px solid var(--aliengreen);
+    background: rgba(52, 52, 52, 0.95);
+    border-bottom: 1px solid var(--aliengreen);
+    box-shadow: 0 0 10px var(--aliendarkergreen);	
 }
 
 /* CHAT */
@@ -202,13 +273,13 @@ a:hover {
 .alien-Push-button {
 	height: 40px;
 	border-radius: 3px;
-	background: url(/modules/alien-crt-ui/images/alien_crt_push-button.png) no-repeat top left;
+	background: url(../images/alien_crt_push-button.png) no-repeat top left;
 }
 
 .alien-Push-button:hover {
 	border-radius: 3px;
 	background-color: inherit;
-	background: url(/modules/alien-crt-ui/images/alien_crt_push-button_hover.gif) no-repeat top left;
+	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
 }
 
 .chat-message {
@@ -234,45 +305,39 @@ a:hover {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
 	z-index: 2;
   	background-size: 100% 2px, 3px 100%;
 	pointer-events: none;
 }
 
 .alienrpg .window-content::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(18, 16, 16, 0.1);
+	opacity: 0;
+	z-index: 2;
+	pointer-events: none;
+	animation: flicker 0.15s infinite;
 }
 
 .alienrpg textarea {
 	border-radius: 0px;
+	border: 1px solid var(--aliendarkergreen);
 	color: var(--aliendarkergreen);
-	font-weight: bolder;
+	font-weight: bolder!important;
 }
 
-textarea:focus {
-	outline: 0px;
-    box-shadow: 0 0 10px var(--aliengreen);
-	background-color: var(--aliengreen);
-	color: #000 ;
+.alienrpg h1 {
+	border-bottom: 2px dotted var(--aliengreen);
 }
 
-combobox:focus {
-	outline: 0px;
-    box-shadow: 0 0 10px var(--aliengreen);
-	background-color: var(--aliengreen);
-	color: #000 ;
-}
+
 
 .alienrpg .profile-img {
 	margin:0;
@@ -330,7 +395,7 @@ combobox:focus {
 }
 
 .tabs .item.active {
-	text-decoration: none;
+	text-decoration: none!important;
 	font-size: 110%;
 	color: white;
 	background-color: var(--aliendarkergreen);
@@ -358,7 +423,7 @@ combobox:focus {
 }
 
 .journal-sheet select {
-	-o-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;	
 }
 
 .resource-content button {
@@ -395,7 +460,7 @@ combobox:focus {
 
 .Item7 {
 	grid-area: Item3;
-	border: 0px solid var(--aliengreen);
+	border: 0px solid var(--aliengreen);				
 }
 
 .Item7 textarea {
@@ -429,6 +494,58 @@ combobox:focus {
 	padding-bottom: 3px;
 }
 
+.alienrpg .dots_conditions .dots {
+	height: 30px;
+	padding-top: 6px;
+	padding-left: 7px;	
+}
+
+.alienrpg .dots.starving,
+.alienrpg .dots.exhausted,
+.alienrpg .dots.panic {
+	width: 100%;
+	background-color: var(--alienoddtab);
+}
+
+.alienrpg .dots.panic .panicked {
+	color: white!important;
+	background-color: red;
+	margin-top: -5px;
+	margin-left: -7px;
+	padding-left: 13px;
+	border-top: 2px solid red;
+	border-bottom: 4px solid red;
+	font-weight: bolder;
+	box-shadow: 0 0 10px red;
+	animation: textShadow 1s infinite;
+}
+
+.panicked-textarea {
+	border: 1px solid yellow!important;
+	background-color: orange!important;
+}
+
+.panicked-textarea:focus {
+	border: 1px solid yellow!important;
+	background-color: yellow!important;
+	color: red!important;
+}
+
+.alienrpg .grid-Consumables {
+	padding: 5px;
+}
+
+.alienrpg .fas.fa-parachute-box {
+	vertical-align: top;
+	padding-top: 9px;
+	padding-left: 3px;
+}
+
+.alienrpg .fa-parachute-box:before {
+	content: "\f49e";
+}
+
+
 .alienrpg .item4 textarea {
 	border-radius: 0px;
 	color: red;
@@ -440,7 +557,7 @@ combobox:focus {
 	text-shadow: 0 0 15px var(--aliengreen);
 	background-color: var(--aliengreen);
 	cursor: pointer;
-
+	
 	font-weight: bolder;
 	text-transform: uppercase;
 	color: #000;
@@ -525,34 +642,24 @@ combobox:focus {
 	margin-bottom: -15px;
 }
 
-.creature-attack-roll:hover {
-	background-color: var(--aliendarkergreen);
-	color: var(--aliendarkergreen);
-}
-
-.Item8 .dots {
-	margin-top: 3px;
-}
-
-#.Item8 .dots.panic .click-stat-level {
-	color: white!important;
-	background-color: red;
-	padding-top: 5px;
-	padding-bottom: 3px;
-	font-weight: bolder;
+.alienrpg .Col1 {
+	margin-left: -5px;	
 }
 
 .alienrpg .fas.fa-tools {
 	vertical-align: top;
 	padding-top: 4px;
-	margin-left: 3px;
+	margin-left: 5px;
+}
+
+.alienrpg .fas.fa-tools:before {
+	content: "\f022";
 }
 
 .alienrpg .fas:hover {
 	color: var(--aliengreen);
 	text-shadow: 0 0 2px var(--aliengreen);
 	animation: textShadow .5s .3;
-
 }
 
 .alienrpg .items-list .item-header {
@@ -564,14 +671,6 @@ combobox:focus {
 	margin-left: 5px;
 	padding: 0 10px 0 10px;
 	border-left: 2px inset var(--aliengreen);
-}
-
-#.alienrpg .editor-content:hover {
-	outline: 0px;
-    box-shadow: 0 0 10px var(--aliengreen);
-	background-color: var(--aliengreen);
-	color: #000 ;
-	font-weight: bold;
 }
 
 .alienrpg .tab.inventory .fas {
@@ -593,11 +692,79 @@ combobox:focus {
 .creature-attack-roll {
 	height: 40px;
 	border-radius: 3px;
-	background: url(/modules/alien-crt-ui/images/alien_crt_roll-attack.png) no-repeat top left;
+	background: url(../images/alien_crt_roll-attack.png) no-repeat top left;
 }
 
 .creature-attack-roll:hover {
 	border-radius: 3px;
 	background-color: inherit;
-	background: url(/modules/alien-crt-ui/images/alien_crt_roll-attack_hover.gif) no-repeat top left;
+	background-color: var(--aliendarkergreen);
+	color: var(--aliendarkergreen);
+	background: url(../images/alien_crt_roll-attack_hover.gif) no-repeat top left;
+}
+
+/* Journals */
+
+.journal-sheet ::-webkit-scrollbar-thumb {
+    background: #135d91 !important;
+    border: 1px solid #135d91 !important;
+}
+
+
+.journal-sheet .editor p {
+	text-align: justify;
+	line-height: 1.3em!important;
+	margin-bottom: 20px;
+}
+
+.journal-sheet .editor .tcol2 {
+	line-height: 1.4em!important;
+	margin-bottom: 20px;
+}
+
+.journal-sheet .editor div {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.journal-sheet .editor .cinsymbol, .camsymbol {
+	height: 36px;
+	vertical-align: top;
+	margin-top: 1px;
+}
+
+.journal-sheet .editor .caption {
+	color: white;
+	text-shadow: 0 0 10px #2a8ed5;
+}
+
+.journal-sheet .editor h1 {
+	line-height: 1em;
+	color: white;
+	text-shadow: 0 0 10px #2a8ed5;
+	border-bottom: 2px solid #135d91;
+	/*color: #c7e376!important;
+	text-shadow: 0 0 10px #a7cb42;*/	
+}
+
+.journal-sheet .editor h2 {
+	color: white!important;
+	text-shadow: 0 0 10px #2a8ed5!important;
+}
+
+.journal-sheet .editor h3 {
+	color: white!important;
+	text-shadow: 0 0 10px #2a8ed5!important;
+}
+
+.journal-sheet .editor .mess {
+	display: block;
+	color: #E6FF99;
+	font-weight: bold;
+	text-shadow: 0 0 3px #D6FF5C;
+	background-color: rgba(50, 70, 50, .3);
+	box-shadow: 0 0 5px rgba(50, 70, 50);
+	padding: 5px 10px 8px 5px; 
+	margin-left: 4%;
+	margin-right: 4%;
 }
