@@ -1,5 +1,3 @@
-<!-- Note that this is the same template file that alienrpg uses. Any changes to this file will only be reflected in the alternate sheet.
-The alternate sheet is enabled by default. See "init.js" -->
 <form class="{{cssClass}}" autocomplete="off">
   {{!-- Sheet Header --}}
   <header class="actor-header">
@@ -34,9 +32,9 @@ The alternate sheet is enabled by default. See "init.js" -->
 
           <h3 class="resource-label rollable gCol8"data-attr="attribute"  data-roll="{{data.attributes.emp.value}}"  data-mod="{{data.attributes.emp.mod}}" data-label="{{data.attributes.emp.label}}">{{localize "ALIENRPG.AbilityEmp"}}</h3>
           <input type="text" class="maxboxsize gCol9" name="data.attributes.emp.value" value="{{data.attributes.emp.value}}" data-dtype="Number" />
-
+         
           {{#if isGM}}
-          <div class="tooltip">
+          <div class="tooltip"> 
           <h3 class="resource-label gCol5 tooltip" >NPC?</h3>
             <span class="tooltiptext" style="font-family:'Times New Roman', Times, serif ">{{localize "ALIENRPG.NPCpopUp"}}</span>
             </div>
@@ -58,7 +56,7 @@ The alternate sheet is enabled by default. See "init.js" -->
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
-
+    
     {{!--Skills Tab --}}
     <div class="tab skills" data-group="primary" data-tab="skills">
       <div class="grid-container ">
@@ -73,11 +71,11 @@ The alternate sheet is enabled by default. See "init.js" -->
             </div>
           </span>
           {{/each}}
-
+          
         </span>
-
+        
         <!-- Col2 -->
-
+        
         <div class="Col2">
           <li class="grid-talents item-header">
             <h2 class="item talTitle">{{localize "ALIENRPG.Talents"}}</h2>
@@ -86,7 +84,7 @@ The alternate sheet is enabled by default. See "init.js" -->
               {{!-- <a class="item-control item-create" style="font-size: smaller;" title="Create item" data-type="talent"><i class="fas fa-plus"></i> {{localize "ALIENRPG.AddItem"}}</a> --}}
             </div>
           </li>
-
+          
           {{#each talents as |item iid|}}
           <li class="item grid-talents" data-item-id="{{item._id}}">
             <h4 class="item-name tal3 talent-btn" data-pmbut="{{item._id}}">{{item.name}} </h4>
@@ -104,7 +102,7 @@ The alternate sheet is enabled by default. See "init.js" -->
                 <div class="item-controls tal2">
                 </div>
               </li>
-
+              
               {{#each agendas as |item iid|}}
               <li class="item grid-talents" data-item-id="{{item._id}}">
                 <h4 class="item-name tal3 talent-btn" data-pmbut="{{item._id}}">{{item.name}} </h4>
@@ -150,7 +148,7 @@ The alternate sheet is enabled by default. See "init.js" -->
                   </span>
                 </div>
               </div>
-
+        
               <div class="Item8">
                 <h2 >{{ localize 'ALIENRPG.Conditions'}}</h2>
                 <div class="dots starving ">
@@ -178,15 +176,15 @@ The alternate sheet is enabled by default. See "init.js" -->
               <div class="dots panic ">
                 <input type="hidden" name="data.general.panic.value" data-max="{{data.general.panic.max}}" value="{{{data.general.panic.value}}}" data-dtype="Number">
                 {{#if data.general.panic.value}}
-                <h4 class="click-stat-level resource-label " style="color: red;" title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.panic.icon}}} {{ localize 'ALIENRPG.Panicked'}}
-                        <input type="text" class="maxboxsize" name="data.general.panic.lastRoll"  value="{{data.general.panic.lastRoll}}" data-dtype="Number">
+                <h4 class="click-stat-level resource-label XXXX" style="color: red;" title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.panic.icon}}} {{ localize 'ALIENRPG.Panicked'}}
+                        <input type="text" class="maxboxsize" name="data.general.panic.lastRoll"  value="{{data.general.panic.lastRoll}}" data-dtype="Number">            
                 </h4>
                 {{else}}
                 <h4 class="click-stat-level resource-label " title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.panic.icon}}} {{ localize 'ALIENRPG.Panicked'}} </h4>
                 {{/if}}
                 </div>
             </div>
-
+            
             <div class="Item9">
               <div class="consumables grid-Consumables">
                 <h2 class="Heading" style="margin-bottom: 0; border-bottom: 0 ">{{localize "ALIENRPG.Consumables"}}</h2>
@@ -196,26 +194,26 @@ The alternate sheet is enabled by default. See "init.js" -->
                       <input type="text" class="maxboxsize" name="data.consumables.air.value" value="{{data.consumables.air.value}}" data-dtype="Number" />
                       <button type="button" class="supply-btn Air2" data-spbutt="Air"  ><i class="fas fa-parachute-box fa-xs" title="{{localize "ALIENRPG.Supply"}}"></i></button>
                     </div>
-
+                    
                   <h3 class="Food1 resource-label">{{localize "ALIENRPG.Food"}}</h3>
                     <div class="resource-content">
                       <input type="text" class="maxboxsize" name="data.consumables.food.value" value="{{data.consumables.food.value}}" data-dtype="Number" />
                       <button type="button" class="supply-btn Food2" data-spbutt="Food" ><i class="fas fa-parachute-box fa-xs" title="{{localize "ALIENRPG.Supply"}}"></i></button>
                     </div>
-
+                    
                     <h3 class="Power1 resource-label">{{localize "ALIENRPG.Power"}}</h3>
                     <div class="resource-content">
                       <input type="text" class="maxboxsize" name="data.consumables.power.value" value="{{data.consumables.power.value}}" data-dtype="Number" />
                       <button type="button" class="supply-btn Power2" data-spbutt="Power"><i class="fas fa-parachute-box fa-xs" title="{{localize "ALIENRPG.Supply"}}"></i></button>
                     </div>
-
+                    
                     <h3 class="Water1 resource-label">{{localize "ALIENRPG.Water"}}</h3>
                     <div class="resource-content">
                       <input type="text" class="maxboxsize" name="data.consumables.water.value" value="{{data.consumables.water.value}}" data-dtype="Number" />
                       <button type="button" class="supply-btn Water2" data-spbutt="Water"><i class="fas fa-parachute-box fa-xs" title="{{localize "ALIENRPG.Supply"}}"></i></button>
                     </div>
-
-
+                    
+                    
                   </div>
 
                   <hr class="Item9">
@@ -223,9 +221,9 @@ The alternate sheet is enabled by default. See "init.js" -->
              	    <label class="   resource-label rollable" data-roll="{{data.general.armor.value}}" data-spbutt="armor">{{ localize "ALIENRPG.Armor"}}  </label>
 		            <input type="text" class="maxboxsize" name="data.general.armor.value"  value="{{data.general.armor.value}}" data-dtype="Number">
                  </span>
-
+  
                 </div>
-
+                
                 <!-- Col 2 -->
                 <div class="Item2">
                   <div class="grid-two">
@@ -238,55 +236,55 @@ The alternate sheet is enabled by default. See "init.js" -->
                       <option value="3">{{localize "ALIENRPG.CompanyAgent"}}</option>
                       <option value="4">{{localize "ALIENRPG.Kid"}}</option>
                       <option value="5">{{localize "ALIENRPG.Medic"}}</option>
-                      <option value="6">{{localize "ALIENRPG.Mercenary"}}</option>
+                      <option value="6">{{localize "ALIENRPG.Mercenary"}}</option>           
                       <option value="7">{{localize "ALIENRPG.Officer"}}</option>
                       <option value="8">{{localize "ALIENRPG.Pilot"}}</option>
                       <option value="9">{{localize "ALIENRPG.Roughneck"}}</option>
-                      <option value="10">{{localize "ALIENRPG.Scientist"}}</option>
-                      <option value="11">{{localize "ALIENRPG.Synthetic"}}</option>
+                      <option value="10">{{localize "ALIENRPG.Scientist"}}</option>           
+                      <option value="11">{{localize "ALIENRPG.Synthetic"}}</option>           
                       {{/select}}
                       </select>
                   </div>
                 </div>
-
+        
         <div class="Item4">
-          <label class="resource-label">{{ localize "ALIENRPG.Appearance"}}</label>
+          <label class="resource-label">{{ localize "ALIENRPG.Appearance"}}</label> 
           <br>
           <textarea name="data.general.appearance.value" rows="2"data-dtype="String">{{data.general.appearance.value}}</textarea>
         </div>
-
+        
         <div class="Item5">
           <label class="resource-label">{{ localize "ALIENRPG.SignatureItem"}}</label>
           <input type="text" class="textbox" name="data.general.sigItem.value" value="{{data.general.sigItem.value}}"  rows="1"data-dtype="String"></textarea>
 
         </div>
-
+        
         <div class="Item3">
-          <label class="resource-label">{{ localize "ALIENRPG.PersonalAgenda"}}</label>
+          <label class="resource-label">{{ localize "ALIENRPG.PersonalAgenda"}}</label> 
           <textarea name="data.general.agenda.value" rows="6"data-dtype="String">{{data.general.agenda.value}}</textarea>
         </div>
-
+        
         <div class="Item6">
-          <label class="resource-label">{{ localize "ALIENRPG.Relationships"}}</label>
+          <label class="resource-label">{{ localize "ALIENRPG.Relationships"}}</label> 
           <br>
           <label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relOne"}}</label>
           <input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
 
-
+      
           <label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
           <input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></textarea>
 
         </div>
-
+        
         <div class="Item7">
-          <label class="resource-label">{{ localize "ALIENRPG.CriticalInjuries"}}</label>
+          <label class="resource-label">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
           <textarea name="data.general.critInj.value" rows="2"data-dtype="String">{{data.general.critInj.value}}</textarea>
         </div>
-
-
+        
+       
   </div>
 
       </div>
     </section>
-    {{log "CONTEXT!!!!"}} {{log this}}
+    {{log "CONTEXT!!!!"}} {{log this}} 
   </form>
