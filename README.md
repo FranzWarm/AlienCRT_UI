@@ -2,6 +2,10 @@
 
 This module adds an old CRT style for Foundry's Alien RPG system sheets, chat cards, and minor tweeks on the interface.
 
+manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
+
+
+
 version 0.3.1
 
 ![v0.3.1](https://user-images.githubusercontent.com/80177177/111000505-eb237280-8360-11eb-9b30-aea0fbf73db7.png)
