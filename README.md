@@ -2,9 +2,11 @@
 
 This module adds an old CRT style for Foundry's Alien RPG system sheets, chat cards, and minor tweeks on the interface.
 
+manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
+
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C727AON)
 
-manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
 ## version 0.4.0
 Improvements made in the default actor and synth sheets.
