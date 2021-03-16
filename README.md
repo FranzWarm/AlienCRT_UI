@@ -2,6 +2,8 @@
 
 This module adds an old CRT style for Foundry's Alien RPG system sheets, chat cards, and minor tweeks on the interface.
 
+<a href='https://ko-fi.com/C0C727AON' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
 ## version 0.4.0
@@ -30,6 +32,8 @@ Original Sheet by [Paul Watson](https://github.com/pwatson100/).
 Thanks to [aMediocreDad](https://github.com/aMediocreDad), [Paul Watson](https://github.com/pwatson100/), Darshyne, and everybody from the Brazilian Foundry discord server.
 
 Alien RPG System by [Free League](https://frialigan.se/en/games/alien/).
+
+https://ko-fi.com/franzwarm
 
 
 
