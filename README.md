@@ -5,6 +5,13 @@ This module adds an old CRT style for Foundry's Alien RPG system sheets, chat ca
 manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
 
+## version 0.5.0
+New style for chat cards
+
+![CRT Chat Cards](https://user-images.githubusercontent.com/80177177/111853154-859f2b00-88f8-11eb-960f-e5c365e92ec2.png)
+
+
+
 ## version 0.4.0
 Improvements made in the default actor and synth sheets.
 - Armor is now in the same area as the character stats
