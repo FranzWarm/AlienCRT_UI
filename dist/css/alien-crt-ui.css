@@ -277,14 +277,22 @@ combobox:focus {
 	animation: textShadow .5s infinite;
 }
 
+.chat-message .message-header .message-sender {
+	padding-bottom: 5px;
+}
+
 .alien-Push-button {
 	height: 40px;
+	margin-top: 5px;
+	margin-left: 2px;
+	box-shadow: 0 0 5px var(--aliendarkergreen);
 	border-radius: 3px;
 	background: url(../images/alien_crt_push-button.png) no-repeat top left;
 }
 
 .alien-Push-button:hover {
 	border-radius: 3px;
+	box-shadow: 0 0 5px var(--aliendarkergreen);
 	background-color: inherit;
 	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
 }
@@ -293,6 +301,37 @@ combobox:focus {
 	font-family: var(--alienfont);
 	font-size: large;
 	font-weight: bold;
+	
+	padding: 13px 15px 50px 13px;
+	border-width: 0px !important;
+	
+	text-shadow: 3px 0 5px var(--aliendarkergreen);
+	box-shadow: 0 1px 5px #000;
+	
+	background-size: 100%;
+	background-position: top, bottom, 0px 18px;
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-image: url("/modules/alien-crt-ui/images/chat-top.png"),
+					  url("/modules/alien-crt-ui/images/chat-bottom.png"),
+					  url("/modules/alien-crt-ui/images/chat-middle.png");
+}
+
+.chat-message.whisper, .chat-message.blind {
+	filter: sepia(100%) saturate(200%) brightness(100%) hue-rotate(200deg);
+
+	
+	padding: 13px 15px 50px 13px;
+	border-width: 0px !important;
+	
+	text-shadow: 3px 0 5px var(--aliendarkergreen);
+	box-shadow: 0 1px 5px #000;
+	
+	background-size: 100%;
+	background-position: top, bottom, 0px 18px;
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-image: url("/modules/alien-crt-ui/images/chat-top.png"),
+					  url("/modules/alien-crt-ui/images/chat-bottom.png"),
+					  url("/modules/alien-crt-ui/images/chat-middle.png");
 }
 
 /* CHARACTER SHEET */
@@ -336,7 +375,7 @@ combobox:focus {
 	opacity: 0;
 	z-index: 2;
 	pointer-events: none;
-	animation: flicker 0.15s infinite;
+	/** animation: flicker 0.15s infinite; **/
 }
 
 .alienrpg textarea {
@@ -379,20 +418,11 @@ combobox:focus {
 	animation: textShadow 1s infinite;
 }
 
-/*.alienrpg .rollable-synth-stress:hover {;
-	color: var(--aliengreen) !important;
-	background-color:  #000 !important;
-	border: 0px solid var(--aliengreen) !important;
-	font-weight: normal !important;
-	box-shadow: 0 0 0px var(--aliengreen) !important;	
-	animation: textShadow 2s infinite;
-}*/
-
 .resource-content .maxboxsize {
 	vertical-align: 3px !important;
 }
 
-.alienrpg .grid-Char-Att {
+.alienrpg .crt-grid-Char-Att {
 	margin-left: -5px;
 	border-left: 3px double var(--aliengreen);
 	border-bottom: 3px double var(--aliengreen);
@@ -403,6 +433,12 @@ combobox:focus {
 	grid-column-gap: 0px;
 	grid-template-areas: "gCol1 gCol2 gCol3 gCol4 gCol5 gCol6" "gCol7 gCol8 gCol9 gCol10 gCol11 gCol12";
 	grid-template-columns: 25% 8% 25% 8% 25% 8%;
+	
+	display: grid;
+	grid-row-gap: 3px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 .gCol1, .gCol2, .gCol3, .gCol4, .gCol5, .gCol6,
@@ -411,7 +447,7 @@ combobox:focus {
  	align-self: center;
 }
 
-.grid-Char-Att .maxboxsize {
+.crt-crt-grid-Char-Att .maxboxsize {
 	min-width: 40px;
 	z-index: 1;
 }
@@ -443,7 +479,7 @@ combobox:focus {
   border-color: transparent transparent transparent var(--aliengreen);
 }
 
-.alienrpg .grid-Char-Att .gCol6:focus,
+.alienrpg .crt-grid-Char-Att .gCol6:focus,
 .alienrpg .grid-Consumables .maxboxsize:focus {
 	color: var(--aliendarkergreen)!important;
 	background-color: var(--alienoddtab)!important;
@@ -451,7 +487,7 @@ combobox:focus {
 	cursor: not-allowed!important;
 }
 
-.alienrpg .grid-Char-Att .gCol6:hover,
+.alienrpg .crt-grid-Char-Att .gCol6:hover,
 .alienrpg .grid-Consumables .maxboxsize:hover {
 	cursor: default;
 	border: 1px solid var(--aliendarkergreen);
@@ -783,6 +819,20 @@ combobox:focus {
 	background: url(../images/alien_crt_roll-attack_hover.gif) no-repeat top left;
 }
 
+/* Items */
+
+.alienrpg .profile-img-item {
+	margin:0;
+	height: 125px;
+	width: auto;
+	margin-right: 4px;
+	border-radius: 10px;
+}
+
+.textbox1, .textbox2 {
+	padding-left: 5px !important;
+}
+
 /* Journals */
 
 .journal-sheet ::-webkit-scrollbar-thumb {
@@ -819,22 +869,19 @@ combobox:focus {
 }
 
 .journal-sheet .editor h1 {
-	line-height: 1em;
-	color: white;
-	text-shadow: 0 0 10px #2a8ed5;
+	color: white !important;
+	text-shadow: 0 0 10px #2a8ed5 !important;
 	border-bottom: 2px solid #135d91;
-	/*color: #c7e376!important;
-	text-shadow: 0 0 10px #a7cb42;*/	
 }
 
 .journal-sheet .editor h2 {
-	color: white!important;
-	text-shadow: 0 0 10px #2a8ed5!important;
+	color: white !important;
+	text-shadow: 0 0 10px #2a8ed5 !important;
 }
 
 .journal-sheet .editor h3 {
 	color: white!important;
-	text-shadow: 0 0 10px #2a8ed5!important;
+	text-shadow: 0 0 10px #2a8ed5 !important;
 }
 
 .journal-sheet .editor .mess {
