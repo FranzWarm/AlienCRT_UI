@@ -11,6 +11,10 @@
 	March 2021
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
+
+
 @keyframes flicker {
   0% {
     opacity: 0.27861;
@@ -144,7 +148,10 @@
 }
 
 :root {
-	--alienfont:MS Gothic !important;
+	/*--alienfont: MS Gothic, sans-serif !important;*/
+	--alienfont: 'Kosugi', sans-serif !important;
+	--alienchatfont: 'Blinker', cursive !important;
+	/*--alienmonofont:*/
 	--aliengreen: #88f2ad !important;
 	--aliendarkergreen: #29a253;
 	--alienitemselect: #e0f287;
@@ -284,7 +291,7 @@ combobox:focus {
 .alien-Push-button {
 	height: 40px;
 	margin-top: 5px;
-	margin-left: 2px;
+	margin-left: 1px;
 	box-shadow: 0 0 5px var(--aliendarkergreen);
 	border-radius: 3px;
 	background: url(../images/alien_crt_push-button.png) no-repeat top left;
@@ -298,11 +305,11 @@ combobox:focus {
 }
 
 .chat-message {
-	font-family: var(--alienfont);
-	font-size: 120%;
+	font-family: var(--alienchatfont);
+	font-size: 110%;
 	font-weight: bold;
 	
-	padding: 13px 15px 50px 13px;
+	padding: 13px 15px 50px 11px;
 	border-width: 0px !important;
 	
 	/** text-shadow: 3px 0 5px var(--aliendarkergreen); Disabled until I have more control of styles in chat cards somehow **/
@@ -334,9 +341,9 @@ combobox:focus {
 }
 
 .blink {
-	padding: 3px 0px 1px 5px;
+	padding: 0px 0px 1px 5px;
 	margin-top: 5px;
-	margin-bottom: 7px;
+	margin-bottom: 5px;
 	background-color: red;
 	color: white !important;
 	text-shadow: 0 0 5px red;
@@ -405,6 +412,7 @@ combobox:focus {
 	border: 1px solid var(--aliendarkergreen);
 	color: var(--aliendarkergreen);
 	font-weight: bolder!important;
+	font-family: var(--alienfont);
 }
 
 .alienrpg h1 {
@@ -587,10 +595,10 @@ combobox:focus {
 }
 
 .Col3 {
-  grid-area: Col3;
-  padding-top: 10px;
-  color: var(--aliendarkergreen);
-  font-family: var(--alienfont);
+	grid-area: Col3;
+	padding-top: 10px;
+	color: var(--aliendarkergreen);
+	font-family: var(--alienfont);
 }
 
 
@@ -698,7 +706,7 @@ combobox:focus {
 	font-size: 110%;
 	font-weight: bolder;
 	background-color: var(--aliengreen);
-	border: 2px solid var(--aliengreen);
+	border: 1px solid var(--aliengreen);
 	text-shadow: 0 0 0px var(--aliengreen);	
 	box-shadow: 0 0 5px var(--aliengreen);	
 	cursor: pointer;
