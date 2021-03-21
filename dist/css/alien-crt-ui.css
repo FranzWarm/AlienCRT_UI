@@ -299,13 +299,13 @@ combobox:focus {
 
 .chat-message {
 	font-family: var(--alienfont);
-	font-size: large;
+	font-size: 120%;
 	font-weight: bold;
 	
 	padding: 13px 15px 50px 13px;
 	border-width: 0px !important;
 	
-	text-shadow: 3px 0 5px var(--aliendarkergreen);
+	/** text-shadow: 3px 0 5px var(--aliendarkergreen); Disabled until I have more control of styles in chat cards somehow **/
 	box-shadow: 0 1px 5px #000;
 	
 	background-size: 100%;
@@ -318,12 +318,11 @@ combobox:focus {
 
 .chat-message.whisper, .chat-message.blind {
 	filter: sepia(100%) saturate(200%) brightness(100%) hue-rotate(200deg);
-
 	
 	padding: 13px 15px 50px 13px;
 	border-width: 0px !important;
 	
-	text-shadow: 3px 0 5px var(--aliendarkergreen);
+	/** text-shadow: 3px 0 5px var(--aliendarkergreen); Disabled until I have more control of styles in chat cards somehow **/
 	box-shadow: 0 1px 5px #000;
 	
 	background-size: 100%;
@@ -333,6 +332,29 @@ combobox:focus {
 					  url("/modules/alien-crt-ui/images/chat-bottom.png"),
 					  url("/modules/alien-crt-ui/images/chat-middle.png");
 }
+
+.blink {
+	padding: 3px 0px 1px 5px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	background-color: red;
+	color: white !important;
+	text-shadow: 0 0 5px red;
+	animation: blink .5s 5;
+}
+
+.message-sender {
+	white-space: nowrap;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+.message-sender:hover {
+ 	overflow: visible;
+	white-space: pre-wrap !important;
+}
+
+
 
 /* CHARACTER SHEET */
 
