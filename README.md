@@ -4,6 +4,10 @@ This module adds an old CRT style for Foundry's Alien RPG system sheets, chat ca
 
 manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
+## version 0.5.2
+New fonts for character sheets and chat cards
+![New fonts](https://user-images.githubusercontent.com/80177177/112007630-966fbc80-8b03-11eb-816b-c1c0d3310f9a.png)
+
 
 ## version 0.5.0
 New style for chat cards
