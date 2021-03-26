@@ -4,7 +4,7 @@ This module adds an old CRT style for Foundry's Alien RPG system sheets, chat ca
 
 manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
-## version 0.5.2
+## version 0.5.3
 - Fixed some issues with the styling of the whisper rolls interfering with Foundry's floating menus.
 - Compressed the gif images for push and attack buttons, so it'll load faster.
 - Created a new background image for the pause label.
