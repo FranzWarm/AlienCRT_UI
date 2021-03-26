@@ -270,12 +270,20 @@ combobox:focus {
     box-shadow: 0 0 10px var(--aliendarkergreen);	
 }
 
-/* CHAT */
-
-.sidebar-tab h1 {
-	border-bottom: 2px dotted var(--aliengreen);
+#pause img {
+	box-sizing: border-box;
+	width: 128px;
+	height: 128px;
+	padding-left: 128px;
+	
+	background-image: url("/modules/alien-crt-ui/images/paused-alien.png");
+	animation: rotation 20s infinite linear;
+	
 }
 
+/* CHAT */
+
+.sidebar-tab h1,
 .sidebar-tab h2 {
 	border-bottom: 2px dotted var(--aliengreen);
 }
@@ -312,7 +320,6 @@ combobox:focus {
 	padding: 13px 15px 50px 11px;
 	border-width: 0px !important;
 	
-	/** text-shadow: 3px 0 5px var(--aliendarkergreen); Disabled until I have more control of styles in chat cards somehow **/
 	box-shadow: 0 1px 5px #000;
 	
 	background-size: 100%;
@@ -323,25 +330,78 @@ combobox:focus {
 					  url("/modules/alien-crt-ui/images/chat-middle.png");
 }
 
-.chat-message.whisper, .chat-message.blind {
-	filter: sepia(100%) saturate(200%) brightness(100%) hue-rotate(200deg);
+.chat-message.whisper {	
+	color: royalblue;	
 	
-	padding: 13px 15px 50px 13px;
+	padding: 13px 15px 50px 11px;
 	border-width: 0px !important;
 	
-	/** text-shadow: 3px 0 5px var(--aliendarkergreen); Disabled until I have more control of styles in chat cards somehow **/
 	box-shadow: 0 1px 5px #000;
 	
 	background-size: 100%;
 	background-position: top, bottom, 0px 18px;
 	background-repeat: no-repeat, no-repeat, repeat;
-	background-image: url("/modules/alien-crt-ui/images/chat-top.png"),
-					  url("/modules/alien-crt-ui/images/chat-bottom.png"),
-					  url("/modules/alien-crt-ui/images/chat-middle.png");
+	background-image: url("/modules/alien-crt-ui/images/hidden-chat-top.png"),
+					  url("/modules/alien-crt-ui/images/hidden-chat-bottom.png"),
+					  url("/modules/alien-crt-ui/images/hidden-chat-middle.png");
+}
+
+.chat-message.whisper span,
+.chat-message.whisper div {
+	color: royalblue !important;
+}
+
+.chat-message.whisper h2 {
+	color: lightblue !important;
+	border-bottom: 2px dotted lightsteelblue;
+}
+
+.chat-message.whisper h4 {
+	color: lightsteelblue !important;
+}
+
+.chat-message.whisper hr {
+	border-top: 1px solid lightsteelblue;
+    border-bottom: 1px solid royalblue;
+}
+
+.chat-message.whisper .blink {
+	color: lightsteelblue !important;
+	background-color: royalblue;
+	text-shadow: 0 0 5px lightsteelblue;
+	animation: blink .5 5;
+}
+
+.chat-message.whisper .inline-roll:hover {
+	text-shadow: 0 0 5px lightsteelblue;
+}
+
+.chat-message.whisper .inline-roll,
+.chat-message.whisper .dice-tooltip {
+	border-color: lightsteelblue;
+}
+
+.chat-message.whisper .dice-tooltip img,
+.chat-message.whisper .dice-tooltip li,
+.chat-message.whisper .alien-Push-button,
+.chat-message.whisper span.alien-diceface-b0,
+.chat-message.whisper span.alien-diceface-b6,
+.chat-message.whisper span.alien-diceface-y0,
+.chat-message.whisper span.alien-diceface-y1,
+.chat-message.whisper span.alien-diceface-y6 {
+	filter: sepia(100%) saturate(250%) brightness(100%)
+			hue-rotate(180deg);
+}
+
+.alien-Push-button:hover {
+	border-radius: 3px;
+	box-shadow: 0 0 5px var(--aliendarkergreen);
+	background-color: inherit;
+	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
 }
 
 .blink {
-	padding: 0px 0px 1px 5px;
+	padding: 0px 0px 2px 5px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	background-color: red;
@@ -351,15 +411,16 @@ combobox:focus {
 }
 
 .message-sender {
+	width: 900px !important;
 	white-space: nowrap;
  	overflow: hidden;
  	text-overflow: ellipsis;
 }
 
-.message-sender:hover {
+/*.message-sender:hover {
  	overflow: visible;
 	white-space: pre-wrap !important;
-}
+}*/
 
 
 
