@@ -276,7 +276,7 @@ combobox:focus {
 	height: 128px;
 	padding-left: 128px;
 	
-	background-image: url("/modules/alien-crt-ui/images/paused-alien.png");
+	background-image: url("../images/paused-alien.png");
 	animation: rotation 20s infinite linear;
 	
 }
@@ -325,9 +325,9 @@ combobox:focus {
 	background-size: 100%;
 	background-position: top, bottom, 0px 18px;
 	background-repeat: no-repeat, no-repeat, repeat;
-	background-image: url("/modules/alien-crt-ui/images/chat-top.png"),
-					  url("/modules/alien-crt-ui/images/chat-bottom.png"),
-					  url("/modules/alien-crt-ui/images/chat-middle.png");
+	background-image: url("../images/chat-top.png"),
+					  url("../images/chat-bottom.png"),
+					  url("../images/chat-middle.png");
 }
 
 .chat-message.whisper {	
@@ -341,9 +341,9 @@ combobox:focus {
 	background-size: 100%;
 	background-position: top, bottom, 0px 18px;
 	background-repeat: no-repeat, no-repeat, repeat;
-	background-image: url("/modules/alien-crt-ui/images/hidden-chat-top.png"),
-					  url("/modules/alien-crt-ui/images/hidden-chat-bottom.png"),
-					  url("/modules/alien-crt-ui/images/hidden-chat-middle.png");
+	background-image: url("../images/hidden-chat-top.png"),
+					  url("../images/hidden-chat-bottom.png"),
+					  url("../images/hidden-chat-middle.png");
 }
 
 .chat-message.whisper span,

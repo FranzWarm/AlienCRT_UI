@@ -4,7 +4,7 @@
  * If you want to edit the other sheets like the synth / creature / vehicle / territory and so on, separate overrides needs to be done through the same method as below.
  */
 
-import { alienrpgActorSheet } from "../../../../../systems/alienrpg/module/actor/actor-sheet.js";
+import { alienrpgActorSheet } from "../../../../systems/alienrpg/module/actor/actor-sheet.js";
 
 export class aliencrtActorSheet extends alienrpgActorSheet {
 	constructor(...args) {
