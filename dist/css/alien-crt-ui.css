@@ -630,10 +630,6 @@ combobox:focus {
 	text-transform: uppercase;
 }
 
-.alienrpg .grid-genPage h3 {
-	padding-top: 8px;
-}
-
 .alienrpg .grid-2col-border {
 	margin-top: -3px;
 	padding-bottom: 4px;
@@ -739,6 +735,17 @@ combobox:focus {
 	content: "\f49e";
 }
 
+/* HIDING POWER ROLL BUTTON - THIS IS TEMP */
+.alienrpg .Power2 {
+	color: black !important;
+}
+
+.alienrpg .Power2 .fas:hover {
+	color: black !important;
+	text-shadow: 0 0 0px black !important;
+	animation: textShadow 0 0 !important;
+}
+
 
 .alienrpg .item4 textarea {
 	border-radius: 0px;
@@ -787,8 +794,6 @@ combobox:focus {
 	font-weight: bolder;
 	text-transform: uppercase;
 }
-
-
 
 .grid-talents {
 	text-align: center;

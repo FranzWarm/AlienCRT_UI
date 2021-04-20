@@ -3,7 +3,7 @@
   "title": "Alien RPG CRT UI",
   "description": "Alternate styling for Alien sheets and interface",
   "author": "FranzWarm",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "minimumCoreVersion": "0.7.9",
   "compatibleCoreVersion": "0.7.9",
   "system": ["alienrpg"],
