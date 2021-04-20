@@ -1,4 +1,4 @@
-import { alienrpgSynthActorSheet } from "../../../../../systems/alienrpg/module/actor/synth-sheet.js";
+import { alienrpgSynthActorSheet } from "../../../../systems/alienrpg/module/actor/synth-sheet.js";
 
 export class aliencrtSynthActorSheet extends alienrpgSynthActorSheet {
 	constructor(...args) {
