@@ -4,6 +4,9 @@ This module adds an old CRT style for Foundry's Alien RPG system sheets, chat ca
 
 manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
+![2021-05-09 19_24_47-Window](https://user-images.githubusercontent.com/80177177/117588832-6f456c80-b0fc-11eb-832c-9a64e3181561.png)
+
+
 ## version 0.6.0
 - You now can roll from the critical injuries table by clicking the HEALT label on the top of the sheet.
 - Textbox added to track the character's cash
@@ -22,7 +25,6 @@ manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/modu
 
 ## version 0.5.2
 New fonts for character sheets and chat cards
-![New fonts](https://user-images.githubusercontent.com/80177177/112007630-966fbc80-8b03-11eb-816b-c1c0d3310f9a.png)
 
 
 ## version 0.5.0
