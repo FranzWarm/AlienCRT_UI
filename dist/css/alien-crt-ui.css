@@ -4,15 +4,11 @@
 	CRT Effect by Alec Lownes
 		http://aleclownes.com/2017/02/01/crt-display.html
 
-	Alien RPG Settings
-		Font Style: MS Gothic
-		Colour Picker: #88f2ad
-
-	March 2021
+	May 2021
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200;400&display=swap');
 
 
 @keyframes flicker {
@@ -150,7 +146,7 @@
 :root {
 	/*--alienfont: MS Gothic, sans-serif !important;*/
 	--alienfont: 'Kosugi', sans-serif !important;
-	--alienchatfont: 'Blinker', cursive !important;
+	--alienchatfont: 'Blinker', sans-serif !important;
 	/*--alienmonofont:*/
 	--aliengreen: #88f2ad !important;
 	--aliendarkergreen: #29a253;
@@ -223,6 +219,7 @@ textarea:focus {
     box-shadow: 0 0 10px var(--aliengreen);
 	background-color: var(--aliengreen);
 	color: #000!important;
+	font-weight: 400!important;
 }
 
 combobox:focus {
@@ -417,12 +414,10 @@ combobox:focus {
  	text-overflow: ellipsis;
 }
 
-/*.message-sender:hover {
- 	overflow: visible;
-	white-space: pre-wrap !important;
-}*/
-
-
+.dice-tooltip .part-header .part-formula,
+.dice-tooltip .dice-rolls {
+	padding-left: 3px;
+}
 
 /* CHARACTER SHEET */
 
@@ -471,13 +466,23 @@ combobox:focus {
 .alienrpg textarea {
 	border-radius: 0px;
 	border: 1px solid var(--aliendarkergreen);
-	color: var(--aliendarkergreen);
-	font-weight: bolder!important;
-	font-family: var(--alienfont);
+	color: ghostwhite;
+	font-family: var(--alienchatfont);
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 1px;
 }
 
 .alienrpg h1 {
 	border-bottom: 2px dotted var(--aliengreen);
+	padding-left: 0px !important;
+}
+
+.alienrpg label,
+.alienrpg h2,
+.alienrpg h3 {
+	padding-left: 0px !important;
+	margin: 0px !important;
 }
 
 .alienrpg .profile-img {
@@ -494,12 +499,22 @@ combobox:focus {
 	padding-left: 8px;
 }
 
+.alienrpg .select-css {
+	border-radius: 3px;
+	border: 1px solid var(--aliendarkergreen);
+}
+
+.alienrpg .select-css:hover {
+	border: 1px solid var(--aliengreen);
+}
+
 .alienrpg .grid-4col {
 	border: 3px double var(--aliengreen);
 	border-bottom: 1px solid var(--aliengreen);
 }
 
-.alienrpg .rollable-stress:hover {
+.alienrpg .rollable-stress:hover,
+.alienrpg .rollCrit:hover {
 	color: var(--aliengreen) !important;
 	background-color:  #000 !important;
 	border: 0px solid var(--aliengreen) !important;
@@ -605,7 +620,7 @@ combobox:focus {
 .alienrpg .tabs {
 	color: #000;
     background-color: #fff;
-	font-weight: bolder;
+	font-weight: bold;
 	text-transform: uppercase;
 	text-shadow: 0 0 2px white!important;
 }
@@ -644,49 +659,80 @@ combobox:focus {
 	color: var(--aliendarkergreen);
 }
 
+/** General Tab **/
 
-.Item2, .Item3, .Item4,
-.Item5, .Item6, .Item7,
-.Item10 {
-	border: 0px solid var(--aliengreen);
+.alienrpg .grid-crtPage {
+    display: grid;
+    grid-template-areas: "crt_Col1 crt_Col2";
+    grid-template-columns: 220px;
 }
 
-.Col3 {
-	grid-area: Col3;
-	padding-top: 10px;
-	color: var(--aliendarkergreen);
-	font-family: var(--alienfont);
+.alienrpg .crt_Col1 {
+    display: grid;
+    grid-template-areas: 
+		"crt_Item1",
+		"crt_Item2",
+		"crt_Item3";
+	grid-template-columns: 100%;
 }
 
-
-.grid-attr {
-	border: 0px solid var(--aliengreen);
+.alienrpg .crt_Col2 {
+    display: grid;
+    grid-template-areas: 
+		"crt_Item4",
+		"crt_Item5",
+		"crt_Item6",
+		"crt_Item7",
+		"crt_Item8",
+		"crt_Item9";
+	grid-template-columns: 100%;
+	padding-left: 5px;
 }
 
+/** General Tab - Left Column **/
 
-.alienrpg .dots.experience {
-	width: 100%;
-}
-
-.alienrpg .dots.radiation {
-	background-color: var(--alienitemselect);
-	color: #000;
-	width: 100%;
-	padding-top: 1px;
-	padding-bottom: 3px;
-}
-
-.synth-label {
-	color: #000;
-	width: 100%;
-	padding-bottom: 8px;
+.alienrpg .crt_Col1 h2 {
 	text-transform: uppercase;
-	background-color: var(--alienitemselect);
+	padding-bottom: 4px;
 }
+	
+.alienrpg .crt_Item1,
+.alienrpg .crt_Item2,
+.alienrpg .crt_Item3 {
+    border: 1px solid var(--aliengreen);
+    padding: 5px;
+}
+
+/*** Story and Experience Points ***/
+
+.alienrpg .crt_Item1 {
+    text-align: center;
+	height: 95px;
+}
+
+.alienrpg .crt_Item1 .sp_faded {
+	padding-top: 5px;
+	color: var(--aliendarkergreen);
+}
+
+.alienrpg .crt_Item1 .xp_faded {
+	padding-top: 6px;
+	color: var(--aliendarkergreen);
+}
+
+.alienrpg .crt_Item1 h2 {
+	padding-top: 8px;
+}
+
+.alienrpg .crt_Item1 .xp_dots_pos {
+	padding-top: 8px;
+}
+
+/*** Conditions ***/
 
 .alienrpg .dots_conditions .dots {
-	height: 30px;
-	padding-top: 6px;
+	height: 25px;
+	padding-top: 4px;
 	padding-left: 7px;	
 }
 
@@ -704,13 +750,14 @@ combobox:focus {
 	margin-left: -7px;
 	padding-left: 13px;
 	border-top: 2px solid red;
-	border-bottom: 4px solid red;
-	font-weight: bolder;
+	border-bottom: 2px solid red;
+	font-weight: bold;
 	box-shadow: 0 0 10px red;
 	animation: textShadow 1s infinite;
 }
 
 .panicked-textarea {
+	margin-left: 60px !important;
 	border: 1px solid yellow!important;
 	background-color: orange!important;
 }
@@ -721,9 +768,55 @@ combobox:focus {
 	color: red!important;
 }
 
-.alienrpg .grid-Consumables {
-	padding: 5px;
+.alienrpg .dots.radiation {
+	background-color: var(--alienitemselect);
+	color: #000;
+	width: 100% !important;
+	padding-top: 1px !important;
+	padding-bottom: 35px !important;
+	align-items: center !important;
+	margin-top: 5px;
 }
+
+.alienrpg .dots.radiation.rad_glow {
+	border-radius: 3px;
+	box-shadow: 0 0 10px yellow;
+}
+
+
+.alienrpg .crt_grid_SynthStress {
+	display: grid;
+    grid-template-areas: "imitate-human_left imitate-human_right";
+    grid-template-columns: 70% 30%;
+}
+
+.alienrpg .imitate-human_left {
+	padding-left: 10px;
+}
+
+.alienrpg .imitate-human_right {
+	padding: 5px 0px 0px 10px;
+}
+
+.synth-label {
+	width: 100%;
+	margin-top: 2px;
+	padding: 6px 0px 5px 0px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.synth_fake_check {
+	color: #000;
+	width: 100%;
+	margin-top: 12px;
+	padding: 6px 0px 6px 0px;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: var(--alienitemselect);
+}
+
+/*** Consumables ***/
 
 .alienrpg .fas.fa-parachute-box {
 	vertical-align: top;
@@ -735,22 +828,91 @@ combobox:focus {
 	content: "\f49e";
 }
 
-/* HIDING POWER ROLL BUTTON - THIS IS TEMP */
-.alienrpg .Power2 {
-	color: black !important;
-}
-
-.alienrpg .Power2 .fas:hover {
-	color: black !important;
-	text-shadow: 0 0 0px black !important;
-	animation: textShadow 0 0 !important;
+.alienrpg .crt_Item3 .supply-btn.Power2 {
+	padding-left: 6px;
+	font-size: 20px;
 }
 
 
-.alienrpg .item4 textarea {
-	border-radius: 0px;
-	color: red;
+/** General Tab - Right Column **/
+
+.alienrpg .crt_gridCarrer {
+    display: grid;
+    grid-template-areas: "box1 box2 box3 box4";
+    padding: 0px;
+    grid-template-columns: 15% 45% 10% 30%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+	margin-bottom: 2px;
+}
+
+.alienrpg .crt_gridCarrer .box1, 
+.alienrpg .crt_gridCarrer .box2, 
+.alienrpg .crt_gridCarrer .box3, 
+.alienrpg .crt_gridCarrer .box4 {
+  justify-self: center !important;
+  max-width: 100% !important;
+
+}
+
+.alienrpg .crt_Item4, .alienrpg .crt_Item5,
+.alienrpg .crt_Item6, .alienrpg .crt_Item7,
+.alienrpg .crt_Item8, .alienrpg .crt_Item9 {
+	border: 0px solid var(--aliengreen);
+}
+
+.alienrpg .crt_Item4 .resource-label-header,
+.alienrpg .crt_Item5 .resource-label-header,
+.alienrpg .crt_Item6 .resource-label-header,
+.alienrpg .crt_Item7 .resource-label-header,
+.alienrpg .crt_Item8 .resource-label-header,
+.alienrpg .crt_Item9 .resource-label-header {
+	display: block;
+	width: 100%;
+	padding: 1px 0px 1px 2px !important;
+	color: #000;
 	font-weight: bolder;
+	text-transform: uppercase;
+	background-color: var(--aliendarkergreen);
+}
+
+.alienrpg .crt_Item6 textarea,
+.alienrpg .crt_Item7 textarea {
+	height: 70px;
+}
+
+.alienrpg .crt_Item5 textarea {
+	height: 120px;
+}
+
+.alienrpg .crt_Item8 {
+    padding-bottom: 2px;
+}
+.alienrpg .crt_Item8 input,
+.alienrpg .crt_Item9 input {
+	margin: 0px;
+	width: 100%;
+}
+
+.alienrpg .crt_Relat {
+    display: grid;
+    grid-template-areas: "crt_Relat_Buddy crt_Relat_Rival";
+    grid-template-columns: 49%;
+	grid-column-gap: 5px
+}
+
+/** - **/
+
+.Col3 {
+	grid-area: Col3;
+	padding-top: 10px;
+	color: var(--aliendarkergreen);
+	font-family: var(--alienfont);
+}
+
+.grid-attr {
+	border: 0px solid var(--aliengreen);
 }
 
 .talent-btn:hover, .talent-btn:focus {
@@ -812,8 +974,15 @@ combobox:focus {
 }
 
 .alienrpg .textbox {
-	color: var(--aliendarkergreen);
-	font-weight: bolder;
+	color: ghostwhite;
+	font-family: var(--alienchatfont);
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+.alienrpg .textbox:focus {
+	font-weight: 400;
 }
 
 .alienrpg.actor .encumbrance .encumbrance-bar {
@@ -822,28 +991,6 @@ combobox:focus {
 
 .lCol6 {
 	justify-self: center;
-}
-
-.select-css {
-	border-radius: 0.3em;
-}
-
-.alienrpg .Item3 .resource-label-header,
-.alienrpg .Item4 .resource-label-header,
-.alienrpg .Item5 .resource-label-header,
-.alienrpg .Item6 .resource-label-header,
-.alienrpg .Item7 .resource-label-header {
-	display: block;
-	width: 100%;
-	padding-left: 2px;
-	color: #000;
-	font-weight: bolder;
-	text-transform: uppercase;
-	background-color: var(--aliendarkergreen);
-}
-
-.alienrpg .Item4 .resource-label-header {
-	margin-bottom: -15px;
 }
 
 .crit-injuries {

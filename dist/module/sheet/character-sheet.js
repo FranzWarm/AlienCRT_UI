@@ -15,31 +15,6 @@ export class aliencrtActorSheet extends alienrpgActorSheet {
 	get template() {
 		return "modules/alien-crt-ui/templates/actor/character-sheet.html";
 	}
-	/**@FranzWarm : The commented out stuff below doesn't seem to be necessary at the moment.*/
-	// static get defaultOptions() {
-	// 	return mergeObject(super.defaultOptions, {
-	// 		classes: ["alienrpg", "sheet", "actor", "character-sheet"],
-	// 		width: 740,
-	// 		height: 741,
-	// 		tabs: [
-	// 			{
-	// 				navSelector: ".sheet-tabs",
-	// 				contentSelector: ".sheet-body",
-	// 				initial: "general",
-	// 			},
-	// 		],
-	// 	});
-	// }
-	// getData() {
-	// 	const data = super.getData()
-	// 	return data
-	// }
-	// activateListeners(html) {
-	// 	super.activateListeners(html);
-	// }
-	// async _renderInner(...args) {
-	// 	const html = await super._renderInner(...args);
-	// 	return html
-	// }
+
 }
 export default aliencrtActorSheet;
