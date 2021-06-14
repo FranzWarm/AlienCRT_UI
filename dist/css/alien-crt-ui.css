@@ -1,0 +1,1140 @@
+/*
+	Original Sheet by Paul Watson
+
+	CRT Effect by Alec Lownes
+		http://aleclownes.com/2017/02/01/crt-display.html
+
+	May 2021
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@200;400&display=swap');
+
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+  5% {
+    opacity: 0.34769;
+  }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(255,255,0,0.5), -0.4389924193300864px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(255,255,0,0.5), -2.7928974010788217px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956275843481219px 0 1px rgba(255,255,0,0.5), -0.02956275843481219px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40218538552878136px 0 1px rgba(255,255,0,0.5), -0.40218538552878136px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794037899852017px 0 1px rgba(255,255,0,0.5), -3.4794037899852017px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(255,255,0,0.5), -1.6125630401149584px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.7015590085143956px 0 1px rgba(255,255,0,0.5), -0.7015590085143956px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.896914047650351px 0 1px rgba(255,255,0,0.5), -3.896914047650351px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.870905614848819px 0 1px rgba(255,255,0,0.5), -3.870905614848819px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.231056963361899px 0 1px rgba(255,255,0,0.5), -2.231056963361899px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(255,255,0,0.5), -0.08084290417898504px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.3758461067427543px 0 1px rgba(255,255,0,0.5), -2.3758461067427543px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.202193051050636px 0 1px rgba(255,255,0,0.5), -2.202193051050636px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.8638780614874975px 0 1px rgba(255,255,0,0.5), -2.8638780614874975px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874025155497314px 0 1px rgba(255,255,0,0.5), -0.48874025155497314px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(255,255,0,0.5), -1.8948491305757957px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833037308038857px 0 1px rgba(255,255,0,0.5), -0.0833037308038857px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.09769827255241735px 0 1px rgba(255,255,0,0.5), -0.09769827255241735px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.443339761481782px 0 1px rgba(255,255,0,0.5), -3.443339761481782px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.1841838852799786px 0 1px rgba(255,255,0,0.5), -2.1841838852799786px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(255,255,0,0.5), -2.6208764473832513px 0 1px rgba(80,255,255,0.3), 0 0 3px;
+  }
+}
+
+:root {
+	/*--alienfont: MS Gothic, sans-serif !important;*/
+	--alienfont: 'Kosugi', sans-serif !important;
+	--alienchatfont: 'Blinker', sans-serif !important;
+	/*--alienmonofont:*/
+	--aliengreen: #88f2ad !important;
+	--aliendarkergreen: #29a253;
+	--alienitemselect: #e0f287;
+	--alienoddtab: #14160c;
+}
+
+/* interface */
+
+::-webkit-scrollbar-thumb {
+    outline: none !important;
+    border-radius: 2px !important;
+    background: var(--aliendarkergreen) !important;
+    border: 1px solid var(--aliendarkergreen) !important;
+}
+
+.window-header {
+	background-color: rgba(50,100,120,.3);
+	border-radius: 7px 7px 0px 0px;
+}
+
+.alienrpg input[type="text"],
+.alienrpg input[type="number"],
+.alienrpg input[type="password"],
+.alienrpg input[type="date"],
+.alienrpg input[type="time"] {
+	border-radius: 0px !important;
+	border: 1px solid var(--aliendarkergreen);
+}
+
+.alienrpg input[type="text"]:hover,
+.alienrpg input[type="number"]:hover,
+.alienrpg input[type="password"]:hover,
+.alienrpg input[type="date"]:hover,
+.alienrpg input[type="time"]:hover {
+	border: 1px solid var(--aliengreen);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus {
+  box-shadow: 0 0 5px var(--aliengreen);
+  background-color: var(--aliengreen);
+  color: #000 !important;
+  font-style: bold;
+}
+
+a:hover {
+	text-shadow: 0 0 5px var(--aliengreen);
+}
+
+#sidebar-tabs {
+	border-bottom: 1px solid var(--aliengreen);
+	box-shadow: 0 0 10px var(--aliengreen);
+}
+
+#sidebar-tabs .item.active {
+	border: 1px solid var(--aliengreen);
+	box-shadow: 0 0 6px inset var(--aliengreen);	
+}
+
+select:focus {
+	box-shadow: 0 0 5px var(--aliengreen);
+}
+
+textarea:focus {
+	outline: 0px;
+    box-shadow: 0 0 10px var(--aliengreen);
+	background-color: var(--aliengreen);
+	color: #000!important;
+	font-weight: 400!important;
+}
+
+combobox:focus {
+	outline: 0px;
+    box-shadow: 0 0 10px var(--aliengreen);
+	background-color: var(--aliengreen);
+	color: #000!important;
+}
+
+#hotbar .macro:hover {
+	box-shadow: 0 0 10px inset var(--aliengreen);
+}
+
+#hotbar .macro.active:hover {
+	border: 1px solid var(--aliengreen);
+}
+
+#players ol .player.context {
+	border-top: 1px solid var(--aliengreen);
+	border-bottom: 1px solid var(--aliengreen);
+}
+
+#players ol .player.context .player-name {
+	text-shadow: 0 0 5px var(--aliengreen)!important;
+}
+
+#context-menu li.context-item:hover {
+	text-shadow: 0 0 4px var(--aliengreen)!important;
+}
+
+#controls .scene-control.active,
+#controls .control-tool.active,
+#controls .scene-control:hover,
+#controls .control-tool:hover {
+	border: 1px solid var(--aliengreen);
+	border-bottom: 1px solid var(--aliendarkergreen);
+	box-shadow: 0 0 10px var(--aliendarkergreen);
+}
+
+#navigation #scene-list .scene.view,
+#navigation #scene-list .scene.context {
+    border: 1px solid var(--aliengreen);
+    background: rgba(52, 52, 52, 0.95);
+    border-bottom: 1px solid var(--aliengreen);
+    box-shadow: 0 0 10px var(--aliendarkergreen);	
+}
+
+#pause img {
+	box-sizing: border-box;
+	width: 128px;
+	height: 128px;
+	padding-left: 128px;
+	
+	background-image: url("../images/paused-alien.png");
+	animation: rotation 20s infinite linear;
+	
+}
+
+/* CHAT */
+
+.sidebar-tab h1,
+.sidebar-tab h2 {
+	border-bottom: 2px dotted var(--aliengreen);
+}
+
+.sidebar-tab .fas.fa-trash:hover {
+	animation: textShadow .5s infinite;
+}
+
+.chat-message .message-header .message-sender {
+	padding-bottom: 5px;
+}
+
+.alien-Push-button {
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 1px;
+	box-shadow: 0 0 5px var(--aliendarkergreen);
+	border-radius: 3px;
+	background: url(../images/alien_crt_push-button.png) no-repeat top left;
+}
+
+.alien-Push-button:hover {
+	border-radius: 3px;
+	box-shadow: 0 0 5px var(--aliendarkergreen);
+	background-color: inherit;
+	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
+}
+
+.chat-message {
+	font-family: var(--alienchatfont);
+	font-size: 110%;
+	font-weight: bold;
+	
+	padding: 13px 15px 50px 11px;
+	border-width: 0px !important;
+	
+	box-shadow: 0 1px 5px #000;
+	
+	background-size: 100%;
+	background-position: top, bottom, 0px 18px;
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-image: url("../images/chat-top.png"),
+					  url("../images/chat-bottom.png"),
+					  url("../images/chat-middle.png");
+}
+
+.chat-message.whisper {	
+	color: royalblue;	
+	
+	padding: 13px 15px 50px 11px;
+	border-width: 0px !important;
+	
+	box-shadow: 0 1px 5px #000;
+	
+	background-size: 100%;
+	background-position: top, bottom, 0px 18px;
+	background-repeat: no-repeat, no-repeat, repeat;
+	background-image: url("../images/hidden-chat-top.png"),
+					  url("../images/hidden-chat-bottom.png"),
+					  url("../images/hidden-chat-middle.png");
+}
+
+.chat-message.whisper span,
+.chat-message.whisper div {
+	color: royalblue !important;
+}
+
+.chat-message.whisper h2 {
+	color: lightblue !important;
+	border-bottom: 2px dotted lightsteelblue;
+}
+
+.chat-message.whisper h4 {
+	color: lightsteelblue !important;
+}
+
+.chat-message.whisper hr {
+	border-top: 1px solid lightsteelblue;
+    border-bottom: 1px solid royalblue;
+}
+
+.chat-message.whisper .blink {
+	color: lightsteelblue !important;
+	background-color: royalblue;
+	text-shadow: 0 0 5px lightsteelblue;
+	animation: blink .5 5;
+}
+
+.chat-message.whisper .inline-roll:hover {
+	text-shadow: 0 0 5px lightsteelblue;
+}
+
+.chat-message.whisper .inline-roll,
+.chat-message.whisper .dice-tooltip {
+	border-color: lightsteelblue;
+}
+
+.chat-message.whisper .dice-tooltip img,
+.chat-message.whisper .dice-tooltip li,
+.chat-message.whisper .alien-Push-button,
+.chat-message.whisper span.alien-diceface-b0,
+.chat-message.whisper span.alien-diceface-b6,
+.chat-message.whisper span.alien-diceface-y0,
+.chat-message.whisper span.alien-diceface-y1,
+.chat-message.whisper span.alien-diceface-y6 {
+	filter: sepia(100%) saturate(250%) brightness(100%)
+			hue-rotate(180deg);
+}
+
+.alien-Push-button:hover {
+	border-radius: 3px;
+	box-shadow: 0 0 5px var(--aliendarkergreen);
+	background-color: inherit;
+	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
+}
+
+.blink {
+	padding: 0px 0px 2px 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: red;
+	color: white !important;
+	text-shadow: 0 0 5px red;
+	animation: blink .5s 5;
+}
+
+.message-sender {
+	width: 900px !important;
+	white-space: nowrap;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+
+.dice-tooltip .part-header .part-formula,
+.dice-tooltip .dice-rolls {
+	padding-left: 3px;
+}
+
+/* CHARACTER SHEET */
+
+.sheet {
+	min-width: 600px!important;
+	max-width: 1000px!important;
+	min-height: 350px;
+}
+
+.alienrpg .window-content {
+	padding: 5px;
+	border: 2px solid var(--aliendarkergreen);
+	color: var(--aliengreen);
+	text-shadow: 0 0 2px var(--aliendarkergreen);
+}
+
+.alienrpg .window-content::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	z-index: 2;
+  	background-size: 100% 2px, 3px 100%;
+	pointer-events: none;
+}
+
+.alienrpg .window-content::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(18, 16, 16, 0.1);
+	opacity: 0;
+	z-index: 2;
+	pointer-events: none;
+	/** animation: flicker 0.15s infinite; **/
+}
+
+.alienrpg textarea {
+	border-radius: 0px;
+	border: 1px solid var(--aliendarkergreen);
+	color: ghostwhite;
+	font-family: var(--alienchatfont);
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+.alienrpg h1 {
+	border-bottom: 2px dotted var(--aliengreen);
+	padding-left: 0px !important;
+}
+
+.alienrpg label,
+.alienrpg h2,
+.alienrpg h3 {
+	padding-left: 0px !important;
+	margin: 0px !important;
+}
+
+.alienrpg .profile-img {
+	margin:0;
+	height: 157px;
+	margin-right: 4px;
+	border-radius: 10px;
+}
+
+.alienrpg h1.charname input {
+	text-transform: uppercase;
+	margin-left: -5px;
+	width: calc(100% + 10px);
+	padding-left: 8px;
+}
+
+.alienrpg .select-css {
+	border-radius: 3px;
+	border: 1px solid var(--aliendarkergreen);
+}
+
+.alienrpg .select-css:hover {
+	border: 1px solid var(--aliengreen);
+}
+
+.alienrpg .grid-4col {
+	border: 3px double var(--aliengreen);
+	border-bottom: 1px solid var(--aliengreen);
+}
+
+.alienrpg .rollable-stress:hover,
+.alienrpg .rollCrit:hover {
+	color: var(--aliengreen) !important;
+	background-color:  #000 !important;
+	border: 0px solid var(--aliengreen) !important;
+	font-weight: 1 !important;
+	font-size: 150% !important;
+	box-shadow: 0 0 0px var(--aliengreen) !important;	
+	animation: textShadow 1s infinite;
+}
+
+.resource-content .maxboxsize {
+	vertical-align: 3px !important;
+}
+
+.alienrpg .crt-grid-Char-Att {
+	margin-left: -5px;
+	border-left: 3px double var(--aliengreen);
+	border-bottom: 3px double var(--aliengreen);
+	border-right: 3px double var(--aliengreen);
+	float: right;
+	width: 100%;
+	padding: 6px 12px 6px 2px;
+	grid-column-gap: 0px;
+	grid-template-areas: "gCol1 gCol2 gCol3 gCol4 gCol5 gCol6" "gCol7 gCol8 gCol9 gCol10 gCol11 gCol12";
+	grid-template-columns: 25% 8% 25% 8% 25% 8%;
+	
+	display: grid;
+	grid-row-gap: 3px;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.gCol1, .gCol2, .gCol3, .gCol4, .gCol5, .gCol6,
+.gCol7, .gCol8, .gCol9, .gCol10, .gCol11, .gCol12 {
+	justify-self: center;
+ 	align-self: center;
+}
+
+.crt-crt-grid-Char-Att .maxboxsize {
+	min-width: 40px;
+	z-index: 1;
+}
+
+.gCol11 {
+	color: var(--aliendarkergreen);
+}
+
+.alienrpg .NPC {
+	width: 15px;
+	height: 15px;
+}
+
+.alienrpg .tooltip .tooltiptext {
+ 	width: 250px;
+	top: -36px;
+	right: 200%;
+	margin-left: -60px;
+	
+	color: black;
+	background-color: var(--aliengreen);
+	box-shadow: 0 0 10px var(--aliengreen);
+}
+
+.tooltip .tooltiptext::after {
+  margin-top: 10px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--aliengreen);
+}
+
+.alienrpg .crt-grid-Char-Att .gCol6:focus,
+.alienrpg .grid-Consumables .maxboxsize:focus {
+	color: var(--aliendarkergreen)!important;
+	background-color: var(--alienoddtab)!important;
+	box-shadow: 0 0 0 #000;
+	cursor: not-allowed!important;
+}
+
+.alienrpg .crt-grid-Char-Att .gCol6:hover,
+.alienrpg .grid-Consumables .maxboxsize:hover {
+	cursor: default;
+	border: 1px solid var(--aliendarkergreen);
+}
+
+.click-stat-level .far {
+	letter-spacing: 1px;
+}
+
+.synthsdont {
+	margin: 10px;
+	padding-left: 10px;
+	border-left: 2px dotted var(--aliengreen);
+}
+
+.imitate-human {
+	text-align: center;
+}
+
+.alienrpg .text {
+	background-color: var(--aliendarkergreen);
+}
+
+.alienrpg .tabs {
+	color: #000;
+    background-color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-shadow: 0 0 2px white!important;
+}
+
+.tabs .item.active {
+	text-decoration: none!important;
+	font-size: 110% !important;
+	color: white !important;
+	background-color: var(--aliendarkergreen) !important;
+	box-shadow: 0 0 10px var(--aliendarkergreen) !important;
+	text-shadow: 0 0 10px var(--aliengreen) !important;
+	cursor: default;
+}
+
+.alienrpg .tabs .item:hover {
+	color: #000;
+	background-color: var(--alienitemselect);
+	box-shadow: 0 0 10px var(--alienitemselect);
+}
+
+.alienrpg .grid-genPage h2 {
+	text-transform: uppercase;
+}
+
+.alienrpg .grid-2col-border {
+	margin-top: -3px;
+	padding-bottom: 4px;
+}
+
+.journal-sheet select {
+	-o-text-overflow: ellipsis;	
+}
+
+.resource-content button {
+	width: 16px;
+	color: var(--aliendarkergreen);
+}
+
+/** General Tab **/
+
+.alienrpg .grid-crtPage {
+    display: grid;
+    grid-template-areas: "crt_Col1 crt_Col2";
+    grid-template-columns: 220px;
+}
+
+.alienrpg .crt_Col1 {
+    display: grid;
+    grid-template-areas: 
+		"crt_Item1",
+		"crt_Item2",
+		"crt_Item3";
+	grid-template-columns: 100%;
+}
+
+.alienrpg .crt_Col2 {
+    display: grid;
+    grid-template-areas: 
+		"crt_Item4",
+		"crt_Item5",
+		"crt_Item6",
+		"crt_Item7",
+		"crt_Item8",
+		"crt_Item9";
+	grid-template-columns: 100%;
+	padding-left: 5px;
+}
+
+/** General Tab - Left Column **/
+
+.alienrpg .crt_Col1 h2 {
+	text-transform: uppercase;
+	padding-bottom: 4px;
+}
+	
+.alienrpg .crt_Item1,
+.alienrpg .crt_Item2,
+.alienrpg .crt_Item3 {
+    border: 1px solid var(--aliengreen);
+    padding: 5px;
+}
+
+/*** Story and Experience Points ***/
+
+.alienrpg .crt_Item1 {
+    text-align: center;
+	height: 95px;
+}
+
+.alienrpg .crt_Item1 .sp_faded {
+	padding-top: 5px;
+	color: var(--aliendarkergreen);
+}
+
+.alienrpg .crt_Item1 .xp_faded {
+	padding-top: 6px;
+	color: var(--aliendarkergreen);
+}
+
+.alienrpg .crt_Item1 h2 {
+	padding-top: 8px;
+}
+
+.alienrpg .crt_Item1 .xp_dots_pos {
+	padding-top: 8px;
+}
+
+/*** Conditions ***/
+
+.alienrpg .dots_conditions .dots {
+	height: 25px;
+	padding-top: 4px;
+	padding-left: 7px;	
+}
+
+.alienrpg .dots.starving,
+.alienrpg .dots.exhausted,
+.alienrpg .dots.panic {
+	width: 100%;
+	background-color: var(--alienoddtab);
+}
+
+.alienrpg .dots.panic .panicked {
+	color: white!important;
+	background-color: red;
+	margin-top: -5px;
+	margin-left: -7px;
+	padding-left: 13px;
+	border-top: 2px solid red;
+	border-bottom: 2px solid red;
+	font-weight: bold;
+	box-shadow: 0 0 10px red;
+	animation: textShadow 1s infinite;
+}
+
+.panicked-textarea {
+	margin-left: 60px !important;
+	border: 1px solid yellow!important;
+	background-color: orange!important;
+}
+
+.panicked-textarea:focus {
+	border: 1px solid yellow!important;
+	background-color: yellow!important;
+	color: red!important;
+}
+
+.alienrpg .dots.radiation {
+	background-color: var(--alienitemselect);
+	color: #000;
+	width: 100% !important;
+	padding-top: 1px !important;
+	padding-bottom: 35px !important;
+	align-items: center !important;
+	margin-top: 5px;
+}
+
+.alienrpg .dots.radiation.rad_glow {
+	border-radius: 3px;
+	box-shadow: 0 0 10px yellow;
+}
+
+
+.alienrpg .crt_grid_SynthStress {
+	display: grid;
+    grid-template-areas: "imitate-human_left imitate-human_right";
+    grid-template-columns: 70% 30%;
+}
+
+.alienrpg .imitate-human_left {
+	padding-left: 10px;
+}
+
+.alienrpg .imitate-human_right {
+	padding: 5px 0px 0px 10px;
+}
+
+.synth-label {
+	width: 100%;
+	margin-top: 2px;
+	padding: 6px 0px 5px 0px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.synth_fake_check {
+	color: #000;
+	width: 100%;
+	margin-top: 12px;
+	padding: 6px 0px 6px 0px;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: var(--alienitemselect);
+}
+
+/*** Consumables ***/
+
+.alienrpg .fas.fa-parachute-box {
+	vertical-align: top;
+	padding-top: 6px;
+	padding-left: 3px;
+}
+
+.alienrpg .fa-parachute-box:before {
+	content: "\f49e";
+}
+
+.alienrpg .crt_Item3 .supply-btn.Power2 {
+	padding-left: 6px;
+	font-size: 20px;
+}
+
+
+/** General Tab - Right Column **/
+
+.alienrpg .crt_gridCarrer {
+    display: grid;
+    grid-template-areas: "box1 box2 box3 box4";
+    padding: 0px;
+    grid-template-columns: 15% 45% 10% 30%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+	margin-bottom: 2px;
+}
+
+.alienrpg .crt_gridCarrer .box1, 
+.alienrpg .crt_gridCarrer .box2, 
+.alienrpg .crt_gridCarrer .box3, 
+.alienrpg .crt_gridCarrer .box4 {
+  justify-self: center !important;
+  max-width: 100% !important;
+
+}
+
+.alienrpg .crt_Item4, .alienrpg .crt_Item5,
+.alienrpg .crt_Item6, .alienrpg .crt_Item7,
+.alienrpg .crt_Item8, .alienrpg .crt_Item9 {
+	border: 0px solid var(--aliengreen);
+}
+
+.alienrpg .crt_Item4 .resource-label-header,
+.alienrpg .crt_Item5 .resource-label-header,
+.alienrpg .crt_Item6 .resource-label-header,
+.alienrpg .crt_Item7 .resource-label-header,
+.alienrpg .crt_Item8 .resource-label-header,
+.alienrpg .crt_Item9 .resource-label-header {
+	display: block;
+	width: 100%;
+	padding: 1px 0px 1px 2px !important;
+	color: #000;
+	font-weight: bolder;
+	text-transform: uppercase;
+	background-color: var(--aliendarkergreen);
+}
+
+.alienrpg .crt_Item6 textarea,
+.alienrpg .crt_Item7 textarea {
+	height: 70px;
+}
+
+.alienrpg .crt_Item5 textarea {
+	height: 120px;
+}
+
+.alienrpg .crt_Item8 {
+    padding-bottom: 2px;
+}
+.alienrpg .crt_Item8 input,
+.alienrpg .crt_Item9 input {
+	margin: 0px;
+	width: 100%;
+}
+
+.alienrpg .crt_Relat {
+    display: grid;
+    grid-template-areas: "crt_Relat_Buddy crt_Relat_Rival";
+    grid-template-columns: 49%;
+	grid-column-gap: 5px
+}
+
+/** - **/
+
+.Col3 {
+	grid-area: Col3;
+	padding-top: 10px;
+	color: var(--aliendarkergreen);
+	font-family: var(--alienfont);
+}
+
+.grid-attr {
+	border: 0px solid var(--aliengreen);
+}
+
+.talent-btn:hover, .talent-btn:focus {
+	box-shadow: 0 0 7px var(--aliengreen);
+	text-shadow: 0 0 15px var(--aliengreen);
+	background-color: var(--aliengreen);
+	cursor: help;
+	
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.alienrpg .rollable {
+	width: 90%;
+	text-align: center;
+}
+
+.alienrpg .rollable:hover, .rollable:focus {
+	color: #000;
+	font-size: 110%;
+	font-weight: bolder;
+	background-color: var(--aliengreen);
+	border: 1px solid var(--aliengreen);
+	text-shadow: 0 0 0px var(--aliengreen);	
+	box-shadow: 0 0 5px var(--aliengreen);	
+	cursor: pointer;
+}
+
+.alienrpg .rollItem, .creature-acid-roll {
+	width: 100%;
+	text-align: center;
+}
+
+.alienrpg .rollItem:hover, .rollItem:focus {
+    text-shadow: 0 0 15px var(--aliengreen);
+	box-shadow: 0 0 7px var(--aliengreen);
+	background-color: var(--aliengreen);
+	color: #000;
+    font-size: 100%;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.grid-talents {
+	text-align: center;
+	grid-template-columns: 90% 10%;
+}
+
+.talTitle {
+	text-transform: uppercase;
+	color: #000;
+	background-color: var(--aliengreen);
+}
+
+.alienrpg .item-header {
+	background-color: var(--aliendarkergreen);
+	color: black;
+}
+
+.alienrpg .textbox {
+	color: ghostwhite;
+	font-family: var(--alienchatfont);
+	font-size: 14px;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+.alienrpg .textbox:focus {
+	font-weight: 400;
+}
+
+.alienrpg.actor .encumbrance .encumbrance-bar {
+	background: var(--alienitemselect);
+}
+
+.lCol6 {
+	justify-self: center;
+}
+
+.crit-injuries {
+	margin-top: 118px;
+}
+
+.alienrpg .Col1 {
+	margin-left: -5px;	
+}
+
+.alienrpg .fas.fa-tools {
+	vertical-align: top;
+	padding-top: 4px;
+	margin-left: 5px;
+}
+
+.alienrpg .fas.fa-tools:hover {
+	cursor: help;
+}
+
+.alienrpg .fas.fa-tools:before {
+	content: "\f022";
+}
+
+.alienrpg .fas:hover {
+	color: var(--aliengreen);
+	text-shadow: 0 0 2px var(--aliengreen);
+	animation: textShadow .5s .3;
+}
+
+.alienrpg .items-list .item-header {
+	border-bottom-style: solid;
+	border-bottom-color: var(--aliengreen);
+}
+
+.alienrpg .Col3 .panel {
+	margin-left: 5px;
+	padding: 0 10px 0 10px;
+	border-left: 2px inset var(--aliengreen);
+}
+
+.alienrpg .tab.inventory .fas {
+	margin-right: 10px;
+}
+
+/* Creature Sheet */
+
+.creature-acid-roll:hover, .creature-acid-roll:focus {
+	text-shadow: 0 0 0px var(--aliengreen);
+	color: var(--aliengreen);
+	background-color:  #000;
+	font-weight: 1;
+	font-size: 110%;
+	border: 0px solid var(--aliengreen);
+	animation: textShadow 1s infinite;
+}
+
+.creature-attack-roll {
+	height: 40px;
+	border-radius: 3px;
+	background: url(../images/alien_crt_roll-attack.png) no-repeat top left;
+}
+
+.creature-attack-roll:hover {
+	border-radius: 3px;
+	background-color: inherit;
+	background-color: var(--aliendarkergreen);
+	color: var(--aliendarkergreen);
+	background: url(../images/alien_crt_roll-attack_hover.gif) no-repeat top left;
+}
+
+/* Items */
+
+.alienrpg .profile-img-item {
+	margin:0;
+	height: 125px;
+	width: auto;
+	margin-right: 4px;
+	border-radius: 10px;
+}
+
+.textbox1, .textbox2 {
+	padding-left: 5px !important;
+}
+
+/* Journals */
+
+.journal-sheet ::-webkit-scrollbar-thumb {
+    background: #135d91 !important;
+    border: 1px solid #135d91 !important;
+}
+
+
+.journal-sheet .editor p {
+	text-align: justify;
+	line-height: 1.3em!important;
+	margin-bottom: 20px;
+}
+
+.journal-sheet .editor .tcol2 {
+	line-height: 1.4em!important;
+	margin-bottom: 20px;
+}
+
+.journal-sheet .editor div {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.journal-sheet .editor .cinsymbol, .camsymbol {
+	height: 36px;
+	vertical-align: top;
+	margin-top: 1px;
+}
+
+.journal-sheet .editor .caption {
+	color: white;
+	text-shadow: 0 0 10px #2a8ed5;
+}
+
+.journal-sheet .editor h1 {
+	color: white !important;
+	text-shadow: 0 0 10px #2a8ed5 !important;
+	border-bottom: 2px solid #135d91;
+}
+
+.journal-sheet .editor h2 {
+	color: white !important;
+	text-shadow: 0 0 10px #2a8ed5 !important;
+}
+
+.journal-sheet .editor h3 {
+	color: white!important;
+	text-shadow: 0 0 10px #2a8ed5 !important;
+}
+
+.journal-sheet .editor .mess {
+	display: block;
+	color: #E6FF99;
+	font-weight: bold;
+	text-shadow: 0 0 3px #D6FF5C;
+	background-color: rgba(50, 70, 50, .3);
+	box-shadow: 0 0 5px rgba(50, 70, 50);
+	padding: 5px 10px 8px 5px; 
+	margin-left: 4%;
+	margin-right: 4%;
+}
