@@ -4,8 +4,8 @@
   "description": "Alternate styling for Alien sheets and interface",
   "author": "FranzWarm",
   "url": "https://github.com/FranzWarm/AlienCRT_UI",
-  "version": "0.7.0",
-  "minimumCoreVersion": "0.7.9",
+  "version": "0.7.1",
+  "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "0.8.8",
   "esmodules": [
     "./module/init.js"
