@@ -4,9 +4,9 @@
 		<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.img}}"/>
 		<div class="header-fields">
 			<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'ALIENRPG.Name'}}" /></h1>
-			<div class="resources grid grid-4col">
+			<div class="resources grid grid-synth">
 				{{!-- Health and Stress --}}
-				<h2 for="data.health.value" class="resource-label rollable rollCrit" title="Roll Critical Injury">{{ localize "ALIENRPG.Health"}}</h2>
+				<h2 for="data.health.value" class="resource-label rollable rollCrit" title="{{ localize 'ALIENRPG.CriticalInjuries'}}">{{ localize "ALIENRPG.Health"}}</h2>
 				<div class="resource-content">
 					<button type="button" type="button" class="minus-btn" data-pmbut="minusHealth"><i class="fas fa-minus-square fa-xs" title="Minus"></i></button>
 					<input type="text" class="maxboxsize" name="data.header.health.value" value="{{data.header.health.value}}" data-dtype="Number" />
@@ -14,9 +14,9 @@
 				</div>
 				
 				{{#if data.header.synthstress}}
-				<h2 for="0" class="resource-label rollable rollable-stress" data-panicroll="0"data-mod="0">{{localize "ALIENRPG.NoStress"}}</h2>
+				<h2 for="0" class="resource-label rollable rollable-stress synth-stresslabel" data-panicroll="0"data-mod="0">{{localize "ALIENRPG.NoStress"}}</h2>
 				{{else}}
-				<h2 for="0" class="resource-label " data-panicroll="0"data-mod="0">{{localize "ALIENRPG.NoStress"}}</h2>
+				<h2 for="0" class="resource-label synth-stresslabel" data-panicroll="0"data-mod="0">{{localize "ALIENRPG.NoStress"}}</h2>
 				{{/if}}
 			</div>
 			
@@ -238,11 +238,6 @@
 							<textarea name="data.general.agenda.value" rows="6"data-dtype="String">{{data.general.agenda.value}}</textarea>
 						</div>
 						
-						<div class="crt_Item6">
-							<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
-							<textarea name="data.general.critInj.value" rows="2"data-dtype="String">{{data.general.critInj.value}}</textarea>
-						</div>						
-						
 						<div class="crt_Item7">
 							<label class="resource-label-header">{{ localize "ALIENRPG.Appearance"}}</label> 
 							<textarea name="data.general.appearance.value" rows="2"data-dtype="String">{{data.general.appearance.value}}</textarea>
@@ -261,6 +256,23 @@
 								</div>
 							</div>
 						</div>
+						
+						<div class="crt_Item6">
+							
+							<div class="grid-crit">
+								<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
+								<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
+								
+							</div>
+							
+							{{#each critInj as |item iid|}}
+							<li class="box4 item grid-special" data-item-id="{{item._id}}">
+								<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
+								<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
+							</li>
+							{{/each}}
+						</div>
+						
 					</div>
 					
 				</div>
@@ -268,4 +280,4 @@
 		</section>
 		{{log "CONTEXT!!!!"}} {{log this}} 
 		
-	</form>																																				
+	</form>																																						

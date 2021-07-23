@@ -300,6 +300,7 @@ combobox:focus {
 	box-shadow: 0 0 5px var(--aliendarkergreen);
 	border-radius: 3px;
 	background: url(../images/alien_crt_push-button.png) no-repeat top left;
+	color: #00000000;
 }
 
 .alien-Push-button:hover {
@@ -307,6 +308,7 @@ combobox:focus {
 	box-shadow: 0 0 5px var(--aliendarkergreen);
 	background-color: inherit;
 	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
+	color: #00000000;
 }
 
 .chat-message {
@@ -395,6 +397,7 @@ combobox:focus {
 	box-shadow: 0 0 5px var(--aliendarkergreen);
 	background-color: inherit;
 	background: url(../images/alien_crt_push-button_hover.gif) no-repeat top left;
+	color: #00000000;
 }
 
 .blink {
@@ -494,9 +497,17 @@ combobox:focus {
 
 .alienrpg h1.charname input {
 	text-transform: uppercase;
-	margin-left: -5px;
 	width: calc(100% + 10px);
 	padding-left: 8px;
+	border: 0px !important;
+}
+
+.alienrpg h1.charname input:focus {
+	box-shadow: 0 0 10px var(--aliengreen);
+}
+
+.alienrpg h1.charname { 
+	margin: 0px 0px 5px 0px;
 }
 
 .alienrpg .select-css {
@@ -511,6 +522,32 @@ combobox:focus {
 .alienrpg .grid-4col {
 	border: 3px double var(--aliengreen);
 	border-bottom: 1px solid var(--aliengreen);
+}
+
+.alienrpg .grid-synth {
+	grid-column: 3;
+    grid-template-columns: 25% 25% 50%;
+	border: 3px double var(--aliengreen);
+	border-bottom: 1px solid var(--aliengreen);
+	padding: 4px;
+}
+
+.alienrpg .synth-stresslabel {
+	justify-self: left !important;
+	text-align: left !important;
+}
+
+.alienrpg .minus-btn {
+    width: 14px;
+    color: var(--aliendarkergreen);
+    font-size: 30px;
+}
+
+.alienrpg .plus-btn {
+    width: 14px;
+    color: var(--aliendarkergreen);
+    font-size: 30px;
+    margin-left: -7px;
 }
 
 .alienrpg .rollable-stress:hover,
@@ -681,10 +718,10 @@ combobox:focus {
     grid-template-areas: 
 		"crt_Item4",
 		"crt_Item5",
-		"crt_Item6",
 		"crt_Item7",
 		"crt_Item8",
-		"crt_Item9";
+		"crt_Item9",
+		"crt_Item6";
 	grid-template-columns: 100%;
 	padding-left: 5px;
 }
@@ -840,7 +877,7 @@ combobox:focus {
     display: grid;
     grid-template-areas: "box1 box2 box3 box4";
     padding: 0px;
-    grid-template-columns: 15% 45% 10% 30%;
+    grid-template-columns: 17% 36% 17% 30%;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -853,6 +890,7 @@ combobox:focus {
 .alienrpg .crt_gridCarrer .box4 {
   justify-self: center !important;
   max-width: 100% !important;
+  padding-top: 0px !important;
 
 }
 
@@ -860,6 +898,7 @@ combobox:focus {
 .alienrpg .crt_Item6, .alienrpg .crt_Item7,
 .alienrpg .crt_Item8, .alienrpg .crt_Item9 {
 	border: 0px solid var(--aliengreen);
+	margin-bottom: 3px;
 }
 
 .alienrpg .crt_Item4 .resource-label-header,
@@ -877,13 +916,23 @@ combobox:focus {
 	background-color: var(--aliendarkergreen);
 }
 
-.alienrpg .crt_Item6 textarea,
+.alienrpg .crt_Item6 {
+    height: 72px !important;
+    border: 1px solid var(--aliendarkergreen) !important;
+    margin-bottom: 0px !important;
+}
+
 .alienrpg .crt_Item7 textarea {
-	height: 70px;
+	height: 87px;
 }
 
 .alienrpg .crt_Item5 textarea {
-	height: 120px;
+	height: 107px;
+}
+
+.alienrpg .crt_Item5 textarea:hover,
+.alienrpg .crt_Item7 textarea:hover {
+	border: 1px solid var(--aliengreen);
 }
 
 .alienrpg .crt_Item8 {
@@ -997,6 +1046,25 @@ combobox:focus {
 	margin-top: 118px;
 }
 
+.grid-crit {
+    grid-template-columns: 95% 5%;
+}
+
+.crit2 {
+	text-align: center;
+	font-size: 15px;
+}
+
+.alienrpg .resource-label-header.rollCrit:hover {
+	font-size: 15px !important;
+	background-color: var(--aliendarkergreen) !important;
+	animation: textShadow 1s infinite !important;
+}
+
+.box4 {
+    padding: 7px 0px 0px 7px !important;
+}
+
 .alienrpg .Col1 {
 	margin-left: -5px;	
 }
@@ -1049,16 +1117,19 @@ combobox:focus {
 }
 
 .creature-attack-roll {
-	height: 40px;
-	border-radius: 3px;
+	width: 260px !important;
+	height: 40px !important;
+	border-radius: 3px !important;
+	text-shadow: 0 0 #00000000 !important;
+	color: #00000000 !important;
 	background: url(../images/alien_crt_roll-attack.png) no-repeat top left;
 }
 
 .creature-attack-roll:hover {
-	border-radius: 3px;
-	background-color: inherit;
-	background-color: var(--aliendarkergreen);
-	color: var(--aliendarkergreen);
+	border-radius: 3px !important;
+	background-color: var(--aliendarkergreen) !important;
+	text-shadow: 0 0 #00000000 !important;
+	color: color: #00000000 !important;
 	background: url(../images/alien_crt_roll-attack_hover.gif) no-repeat top left;
 }
 
