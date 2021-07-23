@@ -4,8 +4,13 @@ This module adds an old CRT style for Foundry's Alien RPG system sheets, chat ca
 
 manifest: https://raw.githubusercontent.com/FranzWarm/AlienCRT_UI/main/dist/module.json
 
-![2021-05-09 19_24_47-Window](https://user-images.githubusercontent.com/80177177/117588832-6f456c80-b0fc-11eb-832c-9a64e3181561.png)
+![2021-07-23 11_53_01-Window](https://user-images.githubusercontent.com/80177177/126800429-a6148bc3-cb5c-43fb-a514-4d78618f372a.png)
 
+## version 0.7.0
+- Added a button to roll Critical Injuries from the header bar
+- Drag and Drog critical-injuries items to the table (like the original sheet)
+
+![2021-07-23 11_54_12-Window](https://user-images.githubusercontent.com/80177177/126800636-3ab6a6ab-85fc-40c1-bde3-d66662f49f40.png)
 
 ## version 0.6.0
 - You now can roll from the critical injuries table by clicking the HEALT label on the top of the sheet.
