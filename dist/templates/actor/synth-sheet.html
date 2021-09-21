@@ -229,6 +229,19 @@
 								</select>
 								<label class="resource-label box3">{{localize "ALIENRPG.Cash"}}</label>
 								<input type="text" class="cashboxsize currency box4" name="data.general.cash.value" value="{{data.general.cash.value}}" />
+							</div>	
+							<div class="crt_gridSpecialty">
+								{{#each specialities as |item iid|}}
+								<div class="sbox1 resource-label">
+									<label class="speciality-label" >SPECIALTY</label>
+									<div class="item-controls ">
+									</div>
+								</div>
+								<li class="sbox2 item crt_grid-special" data-item-id="{{item._id}}">
+									<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
+									<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
+								</li>
+								{{/each}}
 							</div>
 						</div>
 						
@@ -251,33 +264,33 @@
 									<input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
 								</div>
 								<div class="crt_Relat_Rival">
-									<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
-									<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
+								<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
+								<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
 								</div>
-							</div>
-						</div>
-						
-						<div class="crt_Item6">
-							
-							<div class="grid-crit">
+								</div>
+								</div>
+								
+								<div class="crt_Item6">
+								
+								<div class="grid-crit">
 								<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
 								<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
 								
-							</div>
-							
-							{{#each critInj as |item iid|}}
-							<li class="box4 item grid-special" data-item-id="{{item._id}}">
+								</div>
+								
+								{{#each critInj as |item iid|}}
+								<li class="box4 item grid-special" data-item-id="{{item._id}}">
 								<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
 								<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
-							</li>
-							{{/each}}
-						</div>
-						
-					</div>
-					
-				</div>
-			</div>
-		</section>
-		{{log "CONTEXT!!!!"}} {{log this}} 
-		
-	</form>																																						
+								</li>
+								{{/each}}
+								</div>
+								
+								</div>
+								
+								</div>
+								</div>
+								</section>
+								{{log "CONTEXT!!!!"}} {{log this}} 
+								
+								</form>																																														
