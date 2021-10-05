@@ -264,15 +264,15 @@
 									<input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
 								</div>
 								<div class="crt_Relat_Rival">
-								<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
-								<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
+									<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
+									<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
 								</div>
-								</div>
-								</div>
-								
-								<div class="crt_Item6">
-								
-								<div class="grid-crit">
+							</div>
+						</div>
+						
+						<div class="crt_Item6">
+							
+							<!-- <div class="grid-crit">
 								<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
 								<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
 								
@@ -283,14 +283,23 @@
 								<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
 								<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
 								</li>
-								{{/each}}
-								</div>
+							{{/each}}-->
+							
+							<div class="grid-crit">
+								<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
+								<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
 								
-								</div>
-								
-								</div>
-								</div>
-								</section>
-								{{log "CONTEXT!!!!"}} {{log this}} 
-								
-								</form>																																														
+							</div>
+							
+							<div class="Item11 items-list" style="overflow: auto">{{> "systems/alienrpg/templates/actor/tabs/critical-inj.html" }}</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		{{log "CONTEXT!!!!"}} {{log this}} 
+		
+	</form>																																																

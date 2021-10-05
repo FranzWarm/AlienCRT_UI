@@ -293,7 +293,7 @@
 										<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
 										<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
 									</li>
-									{{/each}}
+									{{/each}} 									
 								</div>
 							</div>
 							
@@ -316,38 +316,34 @@
 							
 							<div class="crt_Item9">
 								<label class="resource-label-header">{{ localize "ALIENRPG.Relationships"}}</label>
-							<div class="crt_Relat">
-							<div class="crt_Relat_Buddy">
-							<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relOne"}}</label>
-							<input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
-							</div>
-							<div class="crt_Relat_Rival">
-							<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
-							<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
-							</div>
-							</div>
-							</div>
-							
-							<div class="crt_Item6">
-							
-							<div class="grid-crit">
-							<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
-							<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
-							
+								<div class="crt_Relat">
+									<div class="crt_Relat_Buddy">
+										<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relOne"}}</label>
+										<input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
+									</div>
+									<div class="crt_Relat_Rival">
+										<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
+										<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
+									</div>
+								</div>
 							</div>
 							
-							{{#each critInj as |item iid|}}
-							<li class="box4 item grid-special" data-item-id="{{item._id}}">
-							<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
-							<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
-							</li>
-							{{/each}}
+							<div class="crt_Item6" style="overflow: hidden">
+								
+								<div class="grid-crit">
+									<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
+									<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
+									
+								</div>
+								
+								<div class="Item11 items-list" style="overflow: auto">{{> "systems/alienrpg/templates/actor/tabs/critical-inj.html" }}</div>
+								
 							</div>									
-							</div>
-							</div>
-							
-							</div>
-							</section>
-							{{log "CONTEXT!!!!"}} {{log this}} 
-							</form>
-														
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			{{log "CONTEXT!!!!"}} {{log this}} 
+		</form>
+		

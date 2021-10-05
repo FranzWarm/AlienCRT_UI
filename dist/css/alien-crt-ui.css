@@ -278,6 +278,14 @@ combobox:focus {
 	
 }
 
+.alienrpg #context-menu {
+	height: 40px !important;
+}
+
+.alienrpg #context-menu li.context-item {
+    line-height: 1.55;
+}
+
 /* CHAT */
 
 .sidebar-tab h1,
@@ -920,12 +928,15 @@ combobox:focus {
 }
 
 .spe1 {
+	grid-area: spe1;
 	font-weight: 100 !important;
 	text-transform: uppercase;
 }
 
 .spe2 {
+	grid-area: spe2;
 	padding-right: 5px;
+	justify-self: right;
 }
 
 .alienrpg .crt_Item4, .alienrpg .crt_Item5,
@@ -964,7 +975,7 @@ combobox:focus {
 }
 
 .alienrpg .crt_Item6 {
-    height: 72px !important;
+    height: 130px !important;
     border: 1px solid var(--aliendarkergreen) !important;
     margin-bottom: 0px !important;
 }
@@ -1091,6 +1102,13 @@ combobox:focus {
 .crit2 {
 	text-align: center;
 	font-size: 15px;
+}
+.alienrpg .items-list {
+	height: 111px !important;
+}
+
+.critical-inj {
+    padding-bottom: 10px;
 }
 
 .alienrpg .resource-label-header.rollCrit:hover {
