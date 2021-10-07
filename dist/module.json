@@ -4,7 +4,7 @@
   "description": "Alternate styling for Alien sheets and interface",
   "author": "FranzWarm",
   "url": "https://github.com/FranzWarm/AlienCRT_UI",
-  "version": "0.7.3",
+  "version": "0.7.31",
   "minimumCoreVersion": "0.8.5",
   "compatibleCoreVersion": "0.8.9",
   "esmodules": [
@@ -21,7 +21,7 @@
   "dependencies": [],
   "socket": false,
   "manifest": "https://github.com/FranzWarm/AlienCRT_UI/releases/latest/download/module.json",
-  "download": "https://github.com/FranzWarm/AlienCRT_UI/archive/main.zip",
+  "download": "https://github.com/FranzWarm/AlienCRT_UI/releases/download/0.7.31/main.zip",
   "protected": false,
   "coreTranslation": false
 }
