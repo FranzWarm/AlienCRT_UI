@@ -278,10 +278,6 @@ combobox:focus {
 	
 }
 
-.alienrpg #context-menu {
-	height: 40px !important;
-}
-
 .alienrpg #context-menu li.context-item {
     line-height: 1.55;
 }
@@ -678,6 +674,10 @@ combobox:focus {
 	box-shadow: 0 0 10px var(--aliendarkergreen) !important;
 	text-shadow: 0 0 10px var(--aliengreen) !important;
 	cursor: default;
+}
+
+.alienrpg .tabs .item {
+	width: 100% !important;
 }
 
 .alienrpg .tabs .item:hover {
