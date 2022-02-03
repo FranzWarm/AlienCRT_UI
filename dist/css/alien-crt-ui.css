@@ -282,6 +282,10 @@ combobox:focus {
     line-height: 1.55;
 }
 
+.sheet nav.sheet-tabs {
+	padding: 0 0 !important;
+}
+
 /* CHAT */
 
 .sidebar-tab h1,
