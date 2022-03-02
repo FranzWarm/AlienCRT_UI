@@ -282,12 +282,12 @@ combobox:focus {
     line-height: 1.55;
 }
 
-.sheet nav.sheet-tabs {
+.window-content .sheet-tabs {
 	padding: 0 0 !important;
 }
 
-.window-app .window-content > * {
-    flex: 0;
+.window-content .flexcol {
+	flex: 0 !important;
 }
 
 /* CHAT */
