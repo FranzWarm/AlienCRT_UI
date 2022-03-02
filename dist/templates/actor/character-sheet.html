@@ -176,24 +176,24 @@
 									
 									<div class="dots starving ">
 										<input type="hidden" name="data.general.starving.value" data-max="{{data.general.starving.max}}" value="{{{data.general.starving.value}}}" data-dtype="Number">
-										<h4 class="click-stat-level resource-label " title="{{ localize 'ALIENRPG.ConButtons'}}" > {{{data.general.starving.icon}}} {{ localize 'ALIENRPG.Starving'}}
+										<h4 class="click-stat-level-con resource-label " title="{{ localize 'ALIENRPG.ConButtons'}}" > {{{data.general.starving.icon}}} {{ localize 'ALIENRPG.Starving'}}
 										</h4>
 									</div>
 									<div class="dots dehydrated ">
 										<input type="hidden" name="data.general.dehydrated.value" data-max="{{data.general.dehydrated.max}}" value="{{{data.general.dehydrated.value}}}" data-dtype="Number">
-										<h4 class="click-stat-level resource-label" title="{{ localize 'ALIENRPG.ConButtons'}}" > {{{data.general.dehydrated.icon}}} {{ localize 'ALIENRPG.Dehydrated'}}
+										<h4 class="click-stat-level-con resource-label" title="{{ localize 'ALIENRPG.ConButtons'}}" > {{{data.general.dehydrated.icon}}} {{ localize 'ALIENRPG.Dehydrated'}}
 										</h4>
 									</div>
 									
 									<div class="dots exhausted ">
 										<input type="hidden" name="data.general.exhausted.value" data-max="{{data.general.exhausted.max}}" value="{{{data.general.exhausted.value}}}" data-dtype="Number">
-										<h4 class="click-stat-level resource-label" title="{{ localize 'ALIENRPG.ConButtons'}}" > {{{data.general.exhausted.icon}}} {{ localize 'ALIENRPG.Exhausted'}}
+										<h4 class="click-stat-level-con resource-label" title="{{ localize 'ALIENRPG.ConButtons'}}" > {{{data.general.exhausted.icon}}} {{ localize 'ALIENRPG.Exhausted'}}
 										</h4>
 									</div>
 									
 									<div class="dots freezing ">
 										<input type="hidden" name="data.general.freezing.value" data-max="{{data.general.freezing.max}}" value="{{{data.general.freezing.value}}}" data-dtype="Number">
-										<h4 class="click-stat-level resource-label" title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.freezing.icon}}} {{ localize 'ALIENRPG.Freezing'}}
+										<h4 class="click-stat-level-con resource-label" title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.freezing.icon}}} {{ localize 'ALIENRPG.Freezing'}}
 										</h4>
 									</div>
 									
@@ -208,17 +208,28 @@
 										{{/if}}
 									</div>
 									
+									<h3 class="condition overwatch" data-key="overwatch">
+										<a class="overwatch-toggle">
+											{{#if data.general.overwatch}}
+											<i class="far fa-check-square"></i>
+											{{else}}
+											<i class="far fa-square"></i>
+											{{/if}}
+										</a>
+										{{localize "ALIENRPG.Overwatch"}}
+									</h3>
+									
 									{{#if data.general.radiation.value}}
 									<div class="dots radiation rad_glow">
 										<h4 class="resource-label">{{ localize "ALIENRPG.Radiation"}}</h4>
 										<input type="hidden" name="data.general.radiation.value" data-max="{{data.general.radiation.max}}" value="{{data.general.radiation.value}}" data-dtype="Number">
-										<span class="click-stat-level" title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.radiation.icon}}}</span>
+										<span class="click-stat-level-con" title="{{ localize 'ALIENRPG.ConButtons'}}" data-label="{{ localize 'ALIENRPG.Radiation'}}" data-roll="{{data.general.radiation.value}}">{{{data.general.radiation.icon}}}</span>
 									</div>
 									{{else}}
 									<div class="dots radiation">
 										<h4 class="resource-label">{{ localize "ALIENRPG.Radiation"}}</h4>
 										<input type="hidden" name="data.general.radiation.value" data-max="{{data.general.radiation.max}}" value="{{data.general.radiation.value}}" data-dtype="Number">
-										<span class="click-stat-level" title="{{ localize 'ALIENRPG.ConButtons'}}" >{{{data.general.radiation.icon}}}</span>
+										<span class="click-stat-level-con" title="{{ localize 'ALIENRPG.ConButtons'}}" data-label="{{ localize 'ALIENRPG.Radiation'}}" data-roll="{{data.general.radiation.value}}">{{{data.general.radiation.icon}}}</span>
 									</div>
 									{{/if}}
 									
@@ -226,124 +237,124 @@
 							</div>
 							
 							<div class="crt_Item3">
-								<div class="consumables grid-Consumables">
-									<h2 class="Heading">{{localize 'ALIENRPG.Consumables'}}</h2>
-									
-									<h3 class="Air1 resource-label">{{localize 'ALIENRPG.Air'}}</h3>
-									<div class="resource-content">
-										<input type="text" class="maxboxsize" name="data.consumables.air.value" value="{{data.consumables.air.value}}" data-dtype="Number" disabled />
-										<button type="button" class="supply-btn Air2" data-spbutt="Air"  ><i class="fas fa-parachute-box fa-xs" title="{{localize 'ALIENRPG.Supply'}}"></i></button>
-									</div>
-									
-									<h3 class="Food1 resource-label">{{localize 'ALIENRPG.Food'}}</h3>
-									<div class="resource-content">
-										<input type="text" class="maxboxsize" name="data.consumables.food.value" value="{{data.consumables.food.value}}" data-dtype="Number" disabled />
-										<button type="button" class="supply-btn Food2" data-spbutt="Food" ><i class="fas fa-parachute-box fa-xs" title="{{localize 'ALIENRPG.Supply'}}"></i></button>
-									</div>
-									
-									<h3 class="Water1 resource-label">{{localize 'ALIENRPG.Water'}}</h3>
-									<div class="resource-content">
-										<input type="text" class="maxboxsize" name="data.consumables.water.value" value="{{data.consumables.water.value}}" data-dtype="Number" disabled />
-										<button type="button" class="supply-btn Water2" data-spbutt="Water"><i class="fas fa-parachute-box fa-xs" title="{{localize 'ALIENRPG.Supply'}}"></i></button>
-									</div>
-									
-									<h3 class="Power1 resource-label">{{localize 'ALIENRPG.Power'}}</h3>
-									<div class="resource-content">
-										<input type="text" class="maxboxsize" name="data.consumables.power.value" value="{{data.consumables.power.value}}" data-dtype="Number" disabled />
-										<button type="button" class="supply-btn Power2" data-spbutt="Power" disabled>
-										<i class="fa fa-chevron-up" title="You need to go to the Invetory Tab to make this Supply Roll"></i></button> 
-									</div>
-									
-								</div>
+							<div class="consumables grid-Consumables">
+							<h2 class="Heading">{{localize 'ALIENRPG.Consumables'}}</h2>
+							
+							<h3 class="Air1 resource-label">{{localize 'ALIENRPG.Air'}}</h3>
+							<div class="resource-content">
+							<input type="text" class="maxboxsize" name="data.consumables.air.value" value="{{data.consumables.air.value}}" data-dtype="Number" disabled />
+							<button type="button" class="supply-btn Air2" data-spbutt="Air"  ><i class="fas fa-parachute-box fa-xs" title="{{localize 'ALIENRPG.Supply'}}"></i></button>
 							</div>
-						</div>
-						
-						<!-- Col 2 -->
-						<div class="crt_Col2">
+							
+							<h3 class="Food1 resource-label">{{localize 'ALIENRPG.Food'}}</h3>
+							<div class="resource-content">
+							<input type="text" class="maxboxsize" name="data.consumables.food.value" value="{{data.consumables.food.value}}" data-dtype="Number" disabled />
+							<button type="button" class="supply-btn Food2" data-spbutt="Food" ><i class="fas fa-parachute-box fa-xs" title="{{localize 'ALIENRPG.Supply'}}"></i></button>
+							</div>
+							
+							<h3 class="Water1 resource-label">{{localize 'ALIENRPG.Water'}}</h3>
+							<div class="resource-content">
+							<input type="text" class="maxboxsize" name="data.consumables.water.value" value="{{data.consumables.water.value}}" data-dtype="Number" disabled />
+							<button type="button" class="supply-btn Water2" data-spbutt="Water"><i class="fas fa-parachute-box fa-xs" title="{{localize 'ALIENRPG.Supply'}}"></i></button>
+							</div>
+							
+							<h3 class="Power1 resource-label">{{localize 'ALIENRPG.Power'}}</h3>
+							<div class="resource-content">
+							<input type="text" class="maxboxsize" name="data.consumables.power.value" value="{{data.consumables.power.value}}" data-dtype="Number" disabled />
+							<button type="button" class="supply-btn Power2" data-spbutt="Power" disabled>
+							<i class="fa fa-chevron-up" title="You need to go to the Invetory Tab to make this Supply Roll"></i></button> 
+							</div>
+							
+							</div>
+							</div>
+							</div>
+							
+							<!-- Col 2 -->
+							<div class="crt_Col2">
 							<div class="crt_Item4">
-								<div class="crt_gridCarrer">
-									<label class="resource-label box1" >{{localize 'ALIENRPG.Career'}}</label>
-									<select class="select-css box2" name="data.general.career.value" data-dtype="{{data.general.career.value}}">
-										{{#select data.general.career.value}}
-										<!-- <option value=""></option> -->
-										<option value="1">{{localize "ALIENRPG.ColonialMarine"}}</option>
-										<option value="2">{{localize "ALIENRPG.ColonialMarshal"}}</option>
-										<option value="3">{{localize "ALIENRPG.CompanyAgent"}}</option>
-										<option value="4">{{localize "ALIENRPG.Kid"}}</option>
-										<option value="5">{{localize "ALIENRPG.Medic"}}</option>
-										<option value="6">{{localize "ALIENRPG.Mercenary"}}</option>           
-										<option value="7">{{localize "ALIENRPG.Officer"}}</option>
-										<option value="8">{{localize "ALIENRPG.Pilot"}}</option>
-										<option value="9">{{localize "ALIENRPG.Roughneck"}}</option>
-										<option value="10">{{localize "ALIENRPG.Scientist"}}</option>           
-										<option value="11">{{localize "ALIENRPG.Synthetic"}}</option>           
-										{{/select}}
-									</select>
-									<label class="resource-label box3">{{localize "ALIENRPG.Cash"}}</label>
-									<input type="text" class="cashboxsize currency box4" name="data.general.cash.value" value="{{data.general.cash.value}}" />
-								</div>	
-								<div class="crt_gridSpecialty">
-									{{#each specialities as |item iid|}}
-									<div class="sbox1 resource-label">
-										<label class="speciality-label" >SPECIALTY</label>
-										<div class="item-controls ">
-										</div>
-									</div>
-									<li class="sbox2 item crt_grid-special" data-item-id="{{item._id}}">
-										<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
-										<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
-									</li>
-									{{/each}} 									
-								</div>
+							<div class="crt_gridCarrer">
+							<label class="resource-label box1" >{{localize 'ALIENRPG.Career'}}</label>
+							<select class="select-css box2" name="data.general.career.value" data-dtype="{{data.general.career.value}}">
+							{{#select data.general.career.value}}
+							<!-- <option value=""></option> -->
+							<option value="1">{{localize "ALIENRPG.ColonialMarine"}}</option>
+							<option value="2">{{localize "ALIENRPG.ColonialMarshal"}}</option>
+							<option value="3">{{localize "ALIENRPG.CompanyAgent"}}</option>
+							<option value="4">{{localize "ALIENRPG.Kid"}}</option>
+							<option value="5">{{localize "ALIENRPG.Medic"}}</option>
+							<option value="6">{{localize "ALIENRPG.Mercenary"}}</option>           
+							<option value="7">{{localize "ALIENRPG.Officer"}}</option>
+							<option value="8">{{localize "ALIENRPG.Pilot"}}</option>
+							<option value="9">{{localize "ALIENRPG.Roughneck"}}</option>
+							<option value="10">{{localize "ALIENRPG.Scientist"}}</option>           
+							<option value="11">{{localize "ALIENRPG.Synthetic"}}</option>           
+							{{/select}}
+							</select>
+							<label class="resource-label box3">{{localize "ALIENRPG.Cash"}}</label>
+							<input type="text" class="cashboxsize currency box4" name="data.general.cash.value" value="{{data.general.cash.value}}" />
+							</div>	
+							<div class="crt_gridSpecialty">
+							{{#each specialities as |item iid|}}
+							<div class="sbox1 resource-label">
+							<label class="speciality-label" >SPECIALTY</label>
+							<div class="item-controls ">
+							</div>
+							</div>
+							<li class="sbox2 item crt_grid-special" data-item-id="{{item._id}}">
+							<h4 class="item-name spe1" data-pmbut="{{item._id}}">{{item.name}} </h4>
+							<a class="spe2 item-control item-edit" data-item-id="{{item._id}}" title="{{localize 'ALIENRPG.EditItem'}}"><i class="fas fa-edit"></i></a>
+							</li>
+							{{/each}} 									
+							</div>
 							</div>
 							
 							<!-- 4 5 6 7 -->
 							
 							<div class="crt_Item5">
-								<label class="resource-label-header">{{ localize "ALIENRPG.PersonalAgenda"}}</label> 
-								<textarea name="data.general.agenda.value" rows="6"data-dtype="String">{{data.general.agenda.value}}</textarea>
+							<label class="resource-label-header">{{ localize "ALIENRPG.PersonalAgenda"}}</label> 
+							<textarea name="data.general.agenda.value" rows="6"data-dtype="String">{{data.general.agenda.value}}</textarea>
 							</div>
 							
 							<div class="crt_Item7">
-								<label class="resource-label-header">{{ localize "ALIENRPG.Appearance"}}</label> 
-								<textarea name="data.general.appearance.value" rows="2"data-dtype="String">{{data.general.appearance.value}}</textarea>
+							<label class="resource-label-header">{{ localize "ALIENRPG.Appearance"}}</label> 
+							<textarea name="data.general.appearance.value" rows="2"data-dtype="String">{{data.general.appearance.value}}</textarea>
 							</div>
 							
 							<div class="crt_Item8">
-								<label class="resource-label-header">{{ localize "ALIENRPG.SignatureItem"}}</label>
-								<input type="text" class="textbox" name="data.general.sigItem.value" value="{{data.general.sigItem.value}}"  rows="1"data-dtype="String"></input>
+							<label class="resource-label-header">{{ localize "ALIENRPG.SignatureItem"}}</label>
+							<input type="text" class="textbox" name="data.general.sigItem.value" value="{{data.general.sigItem.value}}"  rows="1"data-dtype="String"></input>
 							</div>	
 							
 							<div class="crt_Item9">
-								<label class="resource-label-header">{{ localize "ALIENRPG.Relationships"}}</label>
-								<div class="crt_Relat">
-									<div class="crt_Relat_Buddy">
-										<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relOne"}}</label>
-										<input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
-									</div>
-									<div class="crt_Relat_Rival">
-										<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
-										<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
-									</div>
-								</div>
+							<label class="resource-label-header">{{ localize "ALIENRPG.Relationships"}}</label>
+							<div class="crt_Relat">
+							<div class="crt_Relat_Buddy">
+							<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relOne"}}</label>
+							<input type="text" class="textbox" name="data.general.relOne.value" value="{{data.general.relOne.value}}" rows="1"data-dtype="String"></input>
+							</div>
+							<div class="crt_Relat_Rival">
+							<label class="resource-label" style="font-size: smaller;">{{ localize "ALIENRPG.relTwo"}}</label>
+							<input type="text" class="textbox" name="data.general.relTwo.value"  value="{{data.general.relTwo.value}}" rows="1"data-dtype="String"></input>
+							</div>
+							</div>
 							</div>
 							
 							<div class="crt_Item6" style="overflow: hidden">
-								
-								<div class="grid-crit">
-									<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
-									<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
-									
-								</div>
-								
-								<div class="Item11 items-list" style="overflow: auto">{{> "systems/alienrpg/templates/actor/tabs/critical-inj.html" }}</div>
-								
+							
+							<div class="grid-crit">
+							<label class="resource-label-header">{{ localize "ALIENRPG.CriticalInjuries"}}</label> 
+							<label class="resource-label-header rollCrit crit2" title="{{localize 'ALIENRPG.RollCrit'}}"><i class="fas fa-heartbeat"></i></label>
+							
+							</div>
+							
+							<div class="Item11 items-list" style="overflow: auto">{{> "systems/alienrpg/templates/actor/tabs/critical-inj.html" }}</div>
+							
 							</div>									
-						</div>
-					</div>
-					
-				</div>
-			</section>
-			{{log "CONTEXT!!!!"}} {{log this}} 
-		</form>
-		
+							</div>
+							</div>
+							
+							</div>
+							</section>
+							{{log "CONTEXT!!!!"}} {{log this}} 
+							</form>
+														
