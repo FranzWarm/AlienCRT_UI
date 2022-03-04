@@ -286,10 +286,6 @@ combobox:focus {
 	padding: 0 0 !important;
 }
 
-.window-content .flexcol {
-	flex: 0 !important;
-}
-
 /* CHAT */
 
 .sidebar-tab h1,
@@ -436,11 +432,11 @@ combobox:focus {
 
 /* CHARACTER SHEET */
 
-.sheet {
+/*.sheet {
 	min-width: 600px!important;
 	max-width: 1000px!important;
 	min-height: 350px;
-}
+}*/
 
 .alienrpg .window-content {
 	padding: 5px;
@@ -917,7 +913,7 @@ combobox:focus {
 .alienrpg .crt_gridCarrer .box3, 
 .alienrpg .crt_gridCarrer .box4 {
   justify-self: center !important;
-  max-width: 100% !important;
+  max-width: 100% !important; 
   padding-top: 0px !important;
 
 }
@@ -933,7 +929,7 @@ combobox:focus {
 .alienrpg .crt_gridSpecialty .sbox1,
 .alienrpg .crt_gridSpecialty .sbox2  {
   justify-self: center !important;
-  max-width: 100% !important;
+  max-width: 100% !important; 
   padding-top: 0px !important;
 
 }
