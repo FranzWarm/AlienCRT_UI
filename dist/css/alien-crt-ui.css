@@ -835,7 +835,7 @@ combobox:focus {
     padding-bottom: 38px !important;
     align-items: center !important;
     margin-top: 5px;
-	flex-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 
 .alienrpg .dots.radiation.rad_glow {
