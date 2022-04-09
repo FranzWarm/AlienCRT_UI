@@ -767,6 +767,8 @@ combobox:focus {
 .alienrpg .crt_Item1 .xp_faded {
 	padding-top: 6px;
 	color: var(--aliendarkergreen);
+	display: inline-flex;
+	width: 160px;
 }
 
 .alienrpg .crt_Item1 h2 {
@@ -833,6 +835,7 @@ combobox:focus {
     padding-bottom: 38px !important;
     align-items: center !important;
     margin-top: 5px;
+	flex-wrap: nowrap;
 }
 
 .alienrpg .dots.radiation.rad_glow {
