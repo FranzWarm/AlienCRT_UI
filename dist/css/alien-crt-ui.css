@@ -282,9 +282,7 @@ combobox:focus {
     line-height: 1.55;
 }
 
-.window-content .sheet-tabs {
-	padding: 0 0 !important;
-}
+
 
 /* CHAT */
 
@@ -682,12 +680,21 @@ combobox:focus {
 
 .alienrpg .tabs .item {
 	width: 100% !important;
+	margin: -7px 0 -7px 0;
+	padding-top: 6px;
+}
+
+.alienrpg .tabs .item.active {
+	margin: -7px 0 -7px 0;
+	padding-top: 5px !important;
 }
 
 .alienrpg .tabs .item:hover {
 	color: #000;
 	background-color: var(--alienitemselect);
 	box-shadow: 0 0 10px var(--alienitemselect);
+	margin: -7px 0 -7px 0;
+	padding-top: 6px;
 }
 
 .alienrpg .grid-genPage h2 {
@@ -746,7 +753,8 @@ combobox:focus {
 }
 	
 .alienrpg .crt_Item1,
-.alienrpg .crt_Item2,
+.alienrpg .crt_Item2_char,
+.alienrpg .crt_Item2_synth,
 .alienrpg .crt_Item3 {
     border: 1px solid var(--aliengreen);
     padding: 5px;
@@ -756,7 +764,7 @@ combobox:focus {
 
 .alienrpg .crt_Item1 {
     text-align: center;
-	height: 100%;
+	height: 130px;
 }
 
 .alienrpg .crt_Item1 .sp_faded {
@@ -767,19 +775,30 @@ combobox:focus {
 .alienrpg .crt_Item1 .xp_faded {
 	padding-top: 6px;
 	color: var(--aliendarkergreen);
-	display: inline-flex;
-	width: 160px;
 }
 
 .alienrpg .crt_Item1 h2 {
 	padding-top: 8px;
 }
 
+.alienrpg .crt_Item1 .experience {
+	width: 160px;
+	display: inline-flex;
+	margin-bottom: 10px;
+	
+}
 .alienrpg .crt_Item1 .xp_dots_pos {
-	padding-top: 8px;
+	padding-top: 18px;
 }
 
 /*** Conditions ***/
+
+.alienrpg .crt_Item2_char {
+	height: 319px;
+}
+.alienrpg .crt_Item2_synth {
+	height: 354px;
+}
 
 .alienrpg .dots_conditions .dots {
 	height: 25px;
@@ -828,14 +847,29 @@ combobox:focus {
 }
 
 .alienrpg .dots.radiation {
-    border: 3px dotted var(--alienitemselect);
+    border: 1px dashed var(--alienitemselect);
     color: var(--alienitemselect);
     width: 100% !important;
     padding-top: 4px !important;
     padding-bottom: 38px !important;
     align-items: center !important;
-    margin-top: 5px;
     flex-wrap: nowrap;
+}
+
+.alienrpg .dots.radiation.radbox_char {
+    margin-top: 36px;
+}
+
+.alienrpg .dots.radiation.radbox_synth {
+    margin-top: 27px;
+}
+
+.alienrpg .dots.radiation.radglow_char {
+    margin-top: 36px;
+}
+
+.alienrpg .dots.radiation.radglow_synth {
+    margin-top: 27px;
 }
 
 .alienrpg .dots.radiation.rad_glow {
@@ -993,7 +1027,7 @@ combobox:focus {
 }
 
 .alienrpg .crt_Item6 {
-    height: 150px !important;
+    height: 200px !important;
     border: 1px solid var(--aliendarkergreen) !important;
     margin-bottom: 0px !important;
 }
