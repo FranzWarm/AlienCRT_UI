@@ -317,7 +317,8 @@ combobox:focus {
 	color: #00000000;
 }
 
-.chat-message {
+.chat-message,
+.chat-message.emote {
 	font-family: var(--alienchatfont);
 	font-size: 110%;
 	font-weight: bold;
