@@ -795,10 +795,12 @@ combobox:focus {
 /*** Conditions ***/
 
 .alienrpg .crt_Item2_char {
-	height: 319px;
+	position: relative;
+	height: 334px;
 }
 .alienrpg .crt_Item2_synth {
-	height: 354px;
+	position: relative;
+	height: 370px;
 }
 
 .alienrpg .dots_conditions .dots {
@@ -819,7 +821,8 @@ combobox:focus {
 }
 
 .alienrpg .overwatch_synth {
-	margin: 20px 0 15px 13px !important;
+	/* margin: 20px 0 15px 13px !important; */
+	margin: 6px 0 0 13px !important;
 }
 
 .alienrpg .dots.panic .panicked {
@@ -850,19 +853,28 @@ combobox:focus {
 .alienrpg .dots.radiation {
     border: 1px dashed var(--alienitemselect);
     color: var(--alienitemselect);
-    width: 100% !important;
+    width: 98% !important;
     padding-top: 4px !important;
     padding-bottom: 38px !important;
     align-items: center !important;
     flex-wrap: nowrap;
+	margin: 2px;
 }
 
-.alienrpg .dots.radiation.radbox_char {
+
+ #bottom {
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+/*.alienrpg .dots.radiation.radbox_char {
     margin-top: 36px;
 }
 
 .alienrpg .dots.radiation.radbox_synth {
-    margin-top: 27px;
+    /*margin-top: 27px;
+    margin-top: 7px;
 }
 
 .alienrpg .dots.radiation.radglow_char {
@@ -871,7 +883,7 @@ combobox:focus {
 
 .alienrpg .dots.radiation.radglow_synth {
     margin-top: 27px;
-}
+}*/
 
 .alienrpg .dots.radiation.rad_glow {
 
@@ -1028,7 +1040,7 @@ combobox:focus {
 }
 
 .alienrpg .crt_Item6 {
-    height: 200px !important;
+    height: 216px !important;
     border: 1px solid var(--aliendarkergreen) !important;
     margin-bottom: 0px !important;
 }
@@ -1162,7 +1174,7 @@ combobox:focus {
 }
 	
 .alienrpg .Item11 .items-list {
-	height: 115px !important;
+	height: 179px !important;
 }
 
 .critical-inj {

@@ -202,13 +202,13 @@
 								</h3>
 								
 								{{#if data.general.radiation.value}}
-								<div class="dots radiation rad_glow radglow_synth">
+								<div class="dots radiation rad_glow radglow_synth" id="bottom">
 									<h4 class="resource-label">{{ localize "ALIENRPG.Radiation"}}</h4>
 									<input type="hidden" name="data.general.radiation.value" data-max="{{data.general.radiation.max}}" value="{{data.general.radiation.value}}" data-dtype="Number">
 									<span class="click-stat-level-con" title="{{ localize 'ALIENRPG.ConButtons'}}" data-label="{{ localize 'ALIENRPG.Radiation'}}" data-roll="{{data.general.radiation.value}}">{{{data.general.radiation.icon}}}</span>
 								</div>
 								{{else}}
-								<div class="dots radiation radbox_synth">
+								<div class="dots radiation radbox_synth" id="bottom">
 									<h4 class="resource-label">{{ localize "ALIENRPG.Radiation"}}</h4>
 									<input type="hidden" name="data.general.radiation.value" data-max="{{data.general.radiation.max}}" value="{{data.general.radiation.value}}" data-dtype="Number">
 									<span class="click-stat-level-con" title="{{ localize 'ALIENRPG.ConButtons'}}" data-label="{{ localize 'ALIENRPG.Radiation'}}" data-roll="{{data.general.radiation.value}}">{{{data.general.radiation.icon}}}</span>
