@@ -2,7 +2,7 @@
 
 This module adds an old CRT style for Foundry's Alien RPG system sheets, chat cards, and minor tweeks to the jornals and interface.
 
-![2021-07-23 11_53_01-Window](https://user-images.githubusercontent.com/80177177/126800429-a6148bc3-cb5c-43fb-a514-4d78618f372a.png)
+![2021-07-23 11_53_01-Window](https://user-images.githubusercontent.com/80177177/156721145-107d994b-fea1-4212-ac0b-4c037b56f569.png)
 
 ## version 0.7.0
 - Added a button to roll Critical Injuries from the header bar
